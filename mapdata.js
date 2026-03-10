@@ -171,11 +171,16 @@ var simplemaps_countrymap_mapdata = {
     },
   },
   locations: {
-    0: {
-      name: "Nay Pyi Taw",
-      lat: "19.745",
-      lng: "96.129722",
-    },
+    // 0: {
+    //   name: "Nay Pyi Taw",
+    //   lat: "19.745",
+    //   lng: "96.129722",
+    // },
+    // 1: {
+    //   name: "Taung Gyi",
+    //   lat: "20.7903",
+    //   lng: "97.0362",
+    // },
   },
   labels: {
     MM01: {
