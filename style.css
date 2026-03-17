@@ -1,0 +1,85 @@
+/* General Styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  height: 100vh;
+  background-color: #f0f2f5;
+}
+
+.custom-bg {
+  background-color: #3B729F;
+  color: white;
+  padding: 1rem 0;
+}
+
+.site-header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+/* Section Visibility */
+.page-section {
+  display: none;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.page-section.active {
+  display: block;
+}
+
+/* Split Layout (Home) */
+.split-layout {
+  display: flex;
+  gap: 30px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.map-container {
+  flex: 1.5;
+}
+
+.info-container {
+  flex: 1;
+  border-left: 1px solid #eee;
+  padding-left: 20px;
+}
+
+/* About Card */
+.about-card {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+  line-height: 1.8;
+}
+
+.btn-more {
+  background: #3B729F;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+/* Map adjustment */
+#map {
+  width: 100% !important;
+}
