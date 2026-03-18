@@ -1,25 +1,31 @@
 var simplemaps_countrymap_mapdata = {
   main_settings: {
-    width: "auto",
+    //General settings
+    width: "responsive", //or 'responsive'
     background_color: "#FFFFFF",
     background_transparent: "yes",
     border_color: "#ffffff",
     pop_ups: "detect",
+
+    //State defaults
     state_color: "#CBD5E1",
     state_hover_color: "#3B729F",
     state_url: "",
     border_size: 1.5,
     all_states_inactive: "no",
+    all_states_zoomable: "yes",
+
+    //Location defaults
     location_color: "#FF0067",
     location_type: "square",
     location_size: 25,
     all_locations_inactive: "no",
-    label_color: "#ffffff",
+    label_color: "#1E293B",
     label_size: 16,
     label_font: "Arial",
     hide_labels: "no",
 
-    zoom: "no",
+    zoom: "yes",
     manual_zoom: "no",
 
     div: "map",
@@ -43,5 +49,4 @@ var simplemaps_countrymap_mapdata = {
     MM16: { name: "Rakhine" },
     MM17: { name: "Shan" },
   },
-  labels: {},
 };
