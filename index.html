@@ -25,14 +25,20 @@
   </header>
 
   <div class="dashboard-container" id="dashboard">
+    <!-- Map Side -->
     <div id="left-side">
+      <!-- Map -->
       <div id="map"></div>
+
+      <!-- Back Btn -->
       <button class="map-back-btn" onclick="goBack()">
-        ← BACK TO ALL REGIONS
+        &leftarrow; BACK TO ALL REGIONS
       </button>
     </div>
 
+    <!-- Text Side -->
     <div id="right-side">
+      <!-- Navbar -->
       <div class="cat-navbar">
         <button class="cat-nav-btn active" onclick="showTab('loc', this)">
           Location
@@ -60,6 +66,7 @@
         </button>
       </div>
 
+      <!-- Content -->
       <div class="content-area">
         <h1 id="r-name">Region</h1>
         <div id="p-loc" class="pane active">
