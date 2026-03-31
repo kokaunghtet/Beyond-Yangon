@@ -1,32 +1,15 @@
-/* 
-CSS Code Order
-==============
-1. Positioning 
-2. Box model 
-3. Typography 
-4. Visual styles 
-5. Effects / animation 
-6. Transitions
-*/
-
-@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap");
 
 :root {
-  /* --bg: linear-gradient(140deg,
-      #0F172A 0%,
-      #1E293B 50%,
-      #111827 100%); */
-  --primary: #3B729F;
-  --bg: #F8FAFC;
-  --text-main: #1E293B;
+  --primary: #3b729f;
+  --bg: #f8fafc;
+  --text-main: #1e293b;
   --speed: 0.8s;
   --easing: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 * {
-  /* outline: 1px dotted red; */
   box-sizing: border-box;
-
   user-select: none;
 }
 
@@ -36,15 +19,19 @@ html {
 
 body {
   margin: 0;
-  font-family: "Google Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-optical-sizing: auto;
+  font-family: "Google Sans", sans-serif;
   background: var(--bg);
   color: var(--text-main);
   line-height: 1.6;
   overflow-x: hidden;
+  min-height: 100vh;
+  background-color: #fff;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-/* Top Navigation - Animation with transform */
 .header {
   background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(12px);
@@ -56,7 +43,6 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  box-sizing: border-box;
   z-index: 1000;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   transition: all 0.6s var(--easing);
@@ -73,18 +59,6 @@ body {
   color: var(--primary);
 }
 
-.nav-links a {
-  margin-left: 30px;
-
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.9rem;
-
-  color: var(--primary);
-  cursor: pointer;
-}
-
-/* Main Dashboard Layout */
 .dashboard-container {
   display: flex;
   width: 100vw;
@@ -107,36 +81,33 @@ body {
   width: 0;
   opacity: 0;
   visibility: hidden;
-  background: white;
   transition: all var(--speed) var(--easing);
   display: flex;
   flex-direction: column;
   overflow: hidden;
 }
 
-/* Layout Switch - When State is Selected */
 .active-layout #left-side {
   flex: 0.35;
-  background: #f1f5f9;
 }
 
 .active-layout #right-side {
-  width: 65%;
+  width: 80%;
   opacity: 1;
   visibility: visible;
+  margin-top: 80px;
+  padding: 20px 40px;
 }
 
-/* Map Styling */
 #map {
   width: 90% !important;
   max-width: 800px;
   transition: all var(--speed) var(--easing);
+  transform: scale(0.8);
 }
 
-/* Map Size when Selected */
-.active-layout #map {
+#map.map-zoomed {
   transform: scale(0.7);
-  /* pointer-events: none; */
 }
 
 #map svg path {
@@ -146,9 +117,8 @@ body {
   cursor: pointer;
 }
 
-/* Isolation logic */
 .active-layout #map svg path {
-  opacity: 0.05 !important;
+  opacity: 0 !important;
 }
 
 .active-layout #map svg path.selected-state {
@@ -156,106 +126,632 @@ body {
   fill: var(--primary) !important;
 }
 
-/* Back Button on Map side */
-.map-back-btn {
-  margin-bottom: 100px;
-  background: var(--text-main);
-  color: white;
+/* --- Floating Explore Button (The Switcher) --- */
+#go-to-page2-btn {
+  position: fixed !important;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99999;
+  padding: 15px 35px;
+  border-radius: 50px;
+  background-color: white;
+  color: black;
+  font-weight: bold;
   border: none;
-  padding: 10px 25px;
-  border-radius: 100px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   cursor: pointer;
+
+  transition: 0.3s;
+}
+
+#go-to-page2-btn:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateX(-50%) translateY(-5px);
+}
+
+.back-to-state-btn {
+  position: fixed;
+  top: 90px;
+  left: 40px;
+  z-index: 100000;
+  padding: 10px 22px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
   font-weight: 600;
-  font-size: 0.8rem;
-  display: none;
-  transition: 0.3s;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.active-layout .map-back-btn {
-  display: block;
-  animation: fadeIn 1s;
-}
-
-.map-back-btn:hover {
-  background: var(--primary);
-}
-
-/* Right Side Category Navigation (8 categories) */
-.cat-navbar {
-  display: flex;
-  padding: 15px;
-  background: #fff;
-  border-bottom: 1px solid #eee;
-  gap: 5px;
-}
-
-.cat-nav-btn {
-  flex: 1;
-  padding: 12px 5px;
-  border: none;
-  background: #f8fafc;
+  letter-spacing: 0.2px;
   cursor: pointer;
-  font-weight: 700;
-  font-size: 0.65rem;
-  color: #64748b;
-  border-radius: 6px;
-  text-transform: uppercase;
-  transition: 0.3s;
-  white-space: nowrap;
-}
-
-.cat-nav-btn.active {
-  background: var(--primary);
-  color: white;
-}
-
-/* Content Display */
-.content-area {
-  padding: 50px;
-  flex: 1;
-  overflow-y: auto;
-}
-
-#r-name {
-  font-size: 3rem;
-  font-weight: 800;
-  margin: 0;
-  color: var(--text-main);
-  letter-spacing: -1px;
-}
-
-.pane {
   display: none;
-  line-height: 1.8;
-  margin-top: 30px;
-  font-size: 1.1rem;
-  color: #475569;
+  backdrop-filter: blur(10px);
+  transition: 0.3s var(--easing);
 }
 
-.pane.active {
+.back-to-state-btn:hover {
+  background: rgba(255, 255, 255, 0.9);
+  color: #000;
+  border-color: rgba(255, 255, 255, 0.9);
+}
+
+/* --- Section 3: Full Page City Explorer --- */
+.city-explorer-page {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  min-height: 100vh;
+  z-index: 2;
+  display: none; /* Shown via JS revealCityExplorer() */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  align-items: center;
+  justify-content: space-between;
+  padding: 120px 10% 80px;
+  color: white;
+  gap: 40px;
+}
+
+/* --- City Popup Overlay --- */
+.city-popup {
+  position: absolute;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  background: #0b0b0b;
+  backdrop-filter: blur(6px);
+}
+
+.city-popup.show {
+  display: flex;
+}
+
+.city-popup-card {
+  width: 100%;
+  max-width: none;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0 0 40px;
+  color: #fff;
+  position: relative;
+  box-shadow: none;
+}
+
+.city-popup-close {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 100001;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+}
+
+.city-popup-back {
+  position: fixed;
+  top: 18px;
+  left: 18px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  z-index: 100001;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+}
+
+@media (max-width: 900px) {
+  .city-popup-card {
+    padding: 24px 16px 32px;
+  }
+
+  .category-row {
+    gap: 12px;
+  }
+
+  .category-btn .circle {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+.city-popup-hero {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  border-radius: 0;
+  overflow: hidden;
+  border: none;
+}
+
+.city-popup-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
-  animation: slideUp 0.5s ease;
+}
+
+.city-popup-title {
+  position: absolute;
+  left: 50%;
+  top: 32px;
+  transform: translateX(-50%);
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+.city-popup-actions {
+  margin-top: 22px;
+}
+
+.city-explorer-page.popup-mode .city-info-left,
+.city-explorer-page.popup-mode .city-nav-right {
+  display: none;
+}
+
+.city-explorer-page.popup-mode {
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background-image: none !important;
+  background-color: #0b0b0b;
+}
+
+.city-explorer-page.popup-mode::before {
+  opacity: 0;
+}
+
+/* Dark Overlay for Readability */
+.city-explorer-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0.2) 60%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  z-index: 1;
+}
+
+.city-info-left {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  animation: slideInLeft 0.8s var(--easing);
+}
+
+.city-info-left h1 {
+  font-size: clamp(3rem, 10vw, 6rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1;
+}
+
+.city-info-left p {
+  font-size: 1.2rem;
+  margin: 20px 0;
+  opacity: 0.9;
+}
+
+@media (max-width: 900px) {
+  .city-explorer-page {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 120px 8% 80px;
+  }
+
+  .city-nav-right {
+    position: static;
+    transform: none;
+    margin-top: 24px;
+  }
+}
+
+.city-circle-btn {
+  position: relative;
+  --tx: 0px;
+  --ty: 0px;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transform: translate(var(--tx), var(--ty));
+  transition:
+    transform 0.4s var(--easing),
+    box-shadow 0.4s var(--easing),
+    border-color 0.4s var(--easing);
+}
+
+.city-circle-btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: calc(-1 * var(--dot-gap));
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.25);
+  transition:
+    transform 0.3s var(--easing),
+    background 0.3s var(--easing),
+    box-shadow 0.3s var(--easing);
+}
+
+.city-circle-btn.active {
+  border: 4px solid white;
+  transform: translate(var(--tx), var(--ty)) scale(1.25);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+}
+
+.city-circle-btn.active::after {
+  background: #fff;
+  transform: translateY(-50%) scale(1.25);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+/* Curved stack like reference (3 buttons) */
+.city-nav-right .city-circle-btn:nth-child(1) {
+  --tx: 18px;
+  --ty: -24px;
+}
+.city-nav-right .city-circle-btn:nth-child(2) {
+  --tx: 36px;
+  --ty: 0px;
+}
+.city-nav-right .city-circle-btn:nth-child(3) {
+  --tx: 18px;
+  --ty: 24px;
+}
+
+/* Back Button inside Full Page */
+.back-to-home {
+  position: absolute;
+  top: 30px;
+  left: 40px;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 10px 25px;
+  border-radius: 30px;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+.back-to-home:hover {
+  background: white;
+  color: black;
+}
+
+/* --- Animations --- */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes fadeIn {
   from {
     opacity: 0;
   }
-
   to {
     opacity: 1;
   }
 }
 
-@keyframes slideUp {
+.city-nav-right {
+  position: absolute;
+  right: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column; /* vertical stacking */
+  align-items: center;
+  gap: 40px; /* ဒီနေရာမှာ button နဲ့ dot အကြား gap ကိုချိန်နိုင်ပါတယ် */
+  z-index: 2;
+}
+.city-nav-right .city-item:nth-child(1) {
+  transform: translateX(10px);
+}
+.city-nav-right .city-item:nth-child(2) {
+  transform: translateX(30px);
+}
+.city-nav-right .city-item:nth-child(3) {
+  transform: translateX(10px);
+}
+.dot-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.dot-indicator.active {
+  background: white;
+  transform: scale(1.5);
+}
+.city-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; /* 🔥 button & dot gap */
+}
+body.state-bg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+body.state-bg::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.55);
+
+  z-index: -1;
+}
+
+/* --- ၁။ Root နှင့် Overall Layout --- */
+/* --- Root & Page Overlay --- */
+.nagano-full-page {
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+  background-color: #0b0b0b;
+  background-size: cover;
+  background-position: center;
+  display: none;
+  flex-direction: column;
+  color: white;
+  font-family: "Segoe UI", sans-serif;
+  transition: background-image 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nagano-full-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.8) 20%,
+    rgba(0, 0, 0, 0.2) 60%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  z-index: 1;
+}
+
+.nagano-header,
+.nagano-main-content {
+  position: relative;
+  z-index: 2;
+}
+
+.nagano-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 6%;
+  align-items: center;
+}
+
+.nagano-main-content {
+  display: flex;
+  align-items: center;
+  padding: 0 0 0 6%;
+  flex: 1;
+  overflow: hidden;
+}
+
+.nagano-info-text {
+  flex: 0 0 35%;
+  animation: fadeInText 0.8s ease-out;
+}
+
+@keyframes fadeInText {
   from {
     opacity: 0;
     transform: translateY(20px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+.exploring-tag {
+  color: #ffcc00;
+  letter-spacing: 4px;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+/* --- Navigation Menu (Animated Underline) --- */
+.nagano-nav-item {
+  background: none !important;
+  border: none !important;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 8px 0;
+  cursor: pointer;
+  position: relative;
+  transition: 0.3s;
+  margin-left: 30px;
+}
+
+.nagano-nav-item:hover,
+.nagano-nav-item.active {
+  color: #fff;
+}
+
+.nagano-nav-item::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffcc00;
+  transition: 0.3s;
+}
+
+.nagano-nav-item:hover::after,
+.nagano-nav-item.active::after {
+  width: 100%;
+}
+
+.nagano-cards-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.nagano-card {
+  flex: 1;
+  max-width: 260px;
+  height: 380px;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.nagano-card:hover {
+  flex: 1.4;
+  transform: translateY(-10px);
+  border-color: #ffcc00;
+  z-index: 10;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.nagano-back-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nagano-back-btn:hover {
+  background: #fff;
+  color: #000;
+  transform: translateX(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card-label h3 {
+  font-size: 18px;
+  margin: 4px 0 0 0;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.card-label h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: #ffcc00;
+  transition: width 0.4s ease;
+}
+
+.nagano-card:hover .card-label h3::after {
+  width: 100%;
+}
+
+#nagano-cards-holder {
+  display: flex;
+  gap: 25px;
+  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.card-moving-out {
+  opacity: 0;
+  transform: scale(0.9) translateY(20px);
+  filter: blur(10px);
+  transition: all 0.7s ease-in-out;
+}
+
+.card-arriving {
+  animation: smoothFadeIn 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes smoothFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
   }
 }
