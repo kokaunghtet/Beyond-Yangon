@@ -1,0 +1,117 @@
+/* --- Floating Explore Button (The Switcher) --- */
+#go-to-page2-btn {
+  /* Positioning */
+  position: fixed !important;
+  bottom: 40px;
+  left: 50%;
+  z-index: 99999;
+
+  /* Box Model */
+  display: flex;
+  padding: 12px 20px;
+  align-items: center;
+  gap: 10px;
+
+  /* Typography */
+  font-size: 14px;
+  font-weight: 500;
+
+  /* Visual Styles */
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--color-text);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+
+  /* Effects */
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+
+  /* Transitions / Animations */
+  transition: all 0.4s var(--transition-easing);
+}
+
+#go-to-page2-btn:hover {
+  /* Visual Styles */
+  background: rgba(34, 211, 238, 0.50);
+  color: var(--color-text);
+
+  /* Effects */
+  transform: translateX(5px);
+  box-shadow: var(--shadow-glow);
+}
+
+.back-to-state-btn {
+  /* Positioning */
+  position: fixed;
+  top: 90px;
+  left: 40px;
+  z-index: 100000;
+
+  /* Box Model */
+  display: flex;
+  padding: 12px 28px;
+  align-items: center;
+  gap: 10px;
+
+  /* Typography */
+  font-size: 14px;
+  font-weight: 500;
+
+  /* Visual Styles */
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--color-text);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+
+  /* Effects */
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+
+  /* Transitions / Animations */
+  transition: all 0.4s var(--transition-easing);
+}
+
+.back-to-state-btn:hover {
+  /* Visual Styles */
+  background: rgba(34, 211, 238, 0.50);
+  color: var(--color-text);
+
+  /* Effects */
+  transform: translateX(-5px);
+  box-shadow: var(--shadow-glow);
+}
+
+.nagano-back-btn {
+  /* Box Model */
+  display: flex;
+  padding: 12px 28px;
+  align-items: center;
+  gap: 10px;
+
+  /* Typography */
+  font-size: 14px;
+  font-weight: 500;
+
+  /* Visual Styles */
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--color-text);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+
+  /* Effects */
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+
+  /* Transitions / Animations */
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nagano-back-btn:hover {
+  /* Visual Styles */
+  background: rgba(34, 211, 238, 0.50);
+  color: var(--color-text);
+
+  /* Effects */
+  transform: translateX(-5px);
+  box-shadow: var(--shadow-glow);
+}
