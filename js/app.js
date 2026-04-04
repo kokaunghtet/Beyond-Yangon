@@ -2,317 +2,221 @@
 const regionData = {
   MM01: {
     name: "Sagaing Region",
+    bgImg: "./photo/Sagaing/overview.jpg",
 
-    bgImg: "./photo/sagaing state/overview/overview.jpg",
     overview:
       "Sagaing Region is located in northwestern Myanmar and is known for its strong Buddhist culture, monasteries, and the scenic Sagaing Hills.",
-    population: "5.3 million",
-    capital: "Sagaing",
-    region: "Northwest Myanmar",
+
     cities: [
-      { name: "Sagaing", img: "./photo/sagaing/sagaing.jpg" },
-      { name: "Monywa", img: "./photo/sagaing/monywa.jpg" },
-      { name: "Shwebo", img: "./photo/sagaing/shwebo.jpg" },
+      {
+        name: "Monywa",
+        img: "./photo/Sagaing/button.jpg",
+        bgImg: "./photo/Sagaing/button.jpg",
+        desc: "Capital of Sagaing Region",
+      },
     ],
-    cultureImg: "images/sagaing.jpg",
-    cultureTags: ["Buddhism", "Monasteries", "Traditional Life"],
+
     food: [{ name: "Monywa Noodles", img: "images/monywa.jpg" }],
-    temp: "32°C",
-    humidity: "60%",
-    tourismImg: "images/sagaing-hills.jpg",
+
     tourism: "Sagaing Hills and U Min Thonze Pagoda.",
   },
   MM02: {
     name: "Bago Region",
+    bgImg: "./photo/Bago/overview.jpg",
     overview:
       "Bago Region is rich in history and home to ancient cities and famous pagodas like Shwemawdaw.",
-    population: "4.8 million",
-    capital: "Bago",
-    region: "Southern Myanmar",
     cities: [
-      { name: "Bago", img: "./photo/bago/bago.jpg" },
-      { name: "Pyay", img: "./photo/bago/pyay.jpg" },
-      { name: "Taungoo", img: "./photo/bago/taungoo.jpg" },
+      {
+        name: "Bago",
+        img: "./photo/Bago/button.jpg",
+        bgImg: "./photo/Bago/button.jpg",
+        desc: "Capital of Bago Region",
+      },
     ],
-    cultureImg: "images/bago.jpg",
-    cultureTags: ["Ancient City", "Pagodas", "History"],
     food: [{ name: "Pyay Rice", img: "images/pyay.jpg" }],
-    temp: "30°C",
-    humidity: "70%",
-    tourismImg: "images/shwemawdaw.jpg",
     tourism: "Shwemawdaw Pagoda and Kanbawzathadi Palace.",
   },
 
   MM03: {
     name: "Magway Region",
+    bgImg: "./photo/Magway/overview.jpg",
     overview:
       "Magway Region lies in central Myanmar and is known for dry-zone agriculture and oil fields.",
-    population: "3.9 million",
-    capital: "Magway",
-    region: "Central Myanmar",
     cities: [
-      { name: "Magway", img: "./photo/magway/magway.jpg" },
-      { name: "Pakokku", img: "./photo/magway/pakokku.jpg" },
+      {
+        name: "Magway",
+        img: "./photo/Magway/button.jpg",
+        bgImg: "./photo/Magway/button.jpg",
+        desc: "Capital of Magway Region",
+      },
     ],
-    cultureImg: "images/magway.jpg",
-    cultureTags: ["Dry Zone", "Agriculture"],
     food: [{ name: "Sesame Snacks", img: "images/sesame.jpg" }],
-    temp: "35°C",
-    humidity: "50%",
-    tourismImg: "images/magway-pagoda.jpg",
     tourism: "Myathalun Pagoda.",
   },
 
   MM04: {
     name: "Mandalay Region",
-
-    // 🖼️ 1. OVERVIEW IMAGE (state main image)
-    overviewImg: "./photo/mandalay/overview.jpg",
-
+    bgImg: "./photo/Mandalay_region/overview.jpg",
     overview: "Cultural heart of Myanmar",
-
-    // ===== 3 CITIES =====
     cities: [
       {
         name: "Mandalay",
-
-        // 🖼️ 2. CITY BUTTON IMAGE (circle button image)
-        img: "./photo/mandalay/city1.jpg",
-
-        desc: "Main city",
-
-        // ===== 5 CATEGORY =====
-        categories: {
-          Food: {
-            // 🖼️ 5 IMAGES (Food)
-            items: [
-              {
-                title: "Food 1",
-                img: "./photo/shan state/tanggyi/food/hintope.jpg",
-              },
-              { title: "Food 2", img: "./photo/mandalay/food2.jpg" },
-              { title: "Food 3", img: "./photo/mandalay/food3.jpg" },
-              { title: "Food 4", img: "./photo/mandalay/food4.jpg" },
-              { title: "Food 5", img: "./photo/mandalay/food5.jpg" },
-            ],
-          },
-
-          Event: {
-            items: [
-              { title: "Event 1", img: "./photo/mandalay/event1.jpg" },
-              { title: "Event 2", img: "./photo/mandalay/event2.jpg" },
-              { title: "Event 3", img: "./photo/mandalay/event3.jpg" },
-              { title: "Event 4", img: "./photo/mandalay/event4.jpg" },
-              { title: "Event 5", img: "./photo/mandalay/event5.jpg" },
-            ],
-          },
-
-          Culture: {
-            items: [
-              { title: "Culture 1", img: "./photo/mandalay/culture1.jpg" },
-              { title: "Culture 2", img: "./photo/mandalay/culture2.jpg" },
-              { title: "Culture 3", img: "./photo/mandalay/culture3.jpg" },
-              { title: "Culture 4", img: "./photo/mandalay/culture4.jpg" },
-              { title: "Culture 5", img: "./photo/mandalay/culture5.jpg" },
-            ],
-          },
-
-          Clothes: {
-            items: [
-              { title: "Clothes 1", img: "./photo/mandalay/clothes1.jpg" },
-              { title: "Clothes 2", img: "./photo/mandalay/clothes2.jpg" },
-              { title: "Clothes 3", img: "./photo/mandalay/clothes3.jpg" },
-              { title: "Clothes 4", img: "./photo/mandalay/clothes4.jpg" },
-              { title: "Clothes 5", img: "./photo/mandalay/clothes5.jpg" },
-            ],
-          },
-
-          Tourism: {
-            items: [
-              { title: "Place 1", img: "./photo/mandalay/tour1.jpg" },
-              { title: "Place 2", img: "./photo/mandalay/tour2.jpg" },
-              { title: "Place 3", img: "./photo/mandalay/tour3.jpg" },
-              { title: "Place 4", img: "./photo/mandalay/tour4.jpg" },
-              { title: "Place 5", img: "./photo/mandalay/tour5.jpg" },
-            ],
-          },
-        },
-      },
-
-      // 👉 CITY 2
-      {
-        name: "Amarapura",
-        img: "./photo/mandalay/city2.jpg",
-        desc: "Ancient capital",
-        categories: {
-          /* same structure */
-        },
-      },
-
-      // 👉 CITY 3
-      {
-        name: "Pyin Oo Lwin",
-        img: "./photo/mandalay/city3.jpg",
-        desc: "Hill town",
-        categories: {
-          /* same structure */
-        },
+        img: "./photo/Mandalay_region/mandalay button.jpg",
+        bgImg: "./photo/Mandalay_region/mandalay button.jpg",
+        desc: "Cultural capital of Myanmar",
       },
     ],
   },
 
   MM05: {
     name: "Tanintharyi Region",
+    bgImg: "./photo/thnintharyi/overview.jpg",
     overview:
       "Tanintharyi is a coastal region with beautiful islands and rich marine biodiversity.",
-    population: "1.4 million",
-    capital: "Dawei",
-    region: "Southern Myanmar",
     cities: [
-      { name: "Dawei", img: "./photo/tanintharyi/dawei.jpg" },
-      { name: "Myeik", img: "./photo/tanintharyi/myeik.jpg" },
+      {
+        name: "Dawei",
+        img: "./photo/thnintharyi/button.jpg",
+        bgImg: "./photo/thnintharyi/button.jpg",
+        desc: "Capital city of Tanintharyi Region",
+      },
     ],
-    cultureImg: "images/tanintharyi.jpg",
-    cultureTags: ["Coastal", "Fishing"],
     food: [{ name: "Seafood", img: "images/seafood.jpg" }],
-    temp: "30°C",
-    humidity: "80%",
-    tourismImg: "images/myeik.jpg",
     tourism: "Myeik Archipelago.",
   },
 
   MM06: {
     name: "Yangon Region",
+    bgImg: "./photo/yangon/overview.jpg",
     overview:
       "Yangon is the largest city and economic center of Myanmar with colonial heritage.",
-    population: "7.4 million",
-    capital: "Yangon",
-    region: "Lower Myanmar",
-    cities: [{ name: "Yangon", img: "./photo/yangon/yangon.jpg" }],
-    cultureImg: "images/yangon.jpg",
-    cultureTags: ["Urban", "Colonial"],
+    cities: [
+      {
+        name: "Yangon",
+        img: "./photo/yangon/button.jpg",
+        bgImg: "./photo/yangon/button.jpg",
+        desc: "Capital city of Yangon Region",
+      },
+    ],
     food: [{ name: "Mohinga", img: "images/mohinga.jpg" }],
-    temp: "31°C",
-    humidity: "75%",
-    tourismImg: "images/shwedagon.jpg",
     tourism: "Shwedagon Pagoda.",
   },
 
   MM07: {
     name: "Ayeyarwady Region",
+    bgImg: "./photo/Pathein/overview.jpg",
     overview:
       "Ayeyarwady Region is the rice bowl of Myanmar with vast delta plains.",
-    population: "6.2 million",
-    capital: "Pathein",
-    region: "Delta Region",
-    cities: [{ name: "Pathein", img: "./photo/ayeyarwady/pathein.jpg" }],
-    cultureImg: "images/pathein.jpg",
-    cultureTags: ["Delta", "Farming"],
+    cities: [
+      {
+        name: "Pathein",
+        img: "./photo/Pathein/button.jpg",
+        bgImg: "./photo/Pathein/button.jpg",
+        desc: "Capital city of Ayeyarwady Region",
+      },
+    ],
     food: [{ name: "Fish Curry", img: "images/fish.jpg" }],
-    temp: "30°C",
-    humidity: "85%",
-    tourismImg: "images/ngwesaung.jpg",
     tourism: "Ngwe Saung Beach.",
   },
 
   MM11: {
     name: "Kachin State",
+    bgImg: "./photo/Kachin State/overview.jpg",
     overview:
-      "Kachin State is located in the north and is known for mountains and jade mining.",
-    population: "1.7 million",
-    capital: "Myitkyina",
-    region: "Northern Myanmar",
-    cities: [{ name: "Myitkyina", img: "./photo/kachin/myitkyina.jpg" }],
-    cultureImg: "images/kachin.jpg",
-    cultureTags: ["Ethnic Culture", "Mountains"],
-    food: [{ name: "Kachin Traditional Food", img: "images/kachin-food.jpg" }],
-    temp: "25°C",
-    humidity: "65%",
-    tourismImg: "images/hkakabo.jpg",
-    tourism: "Hkakabo Razi.",
+      "Kachin State is known for mountains, jade mining, and rich ethnic culture.",
+    cities: [
+      {
+        name: "Myitkyina",
+        img: "./photo/Kachin State/button.jpg",
+        bgImg: "./photo/Kachin State/button.jpg",
+        desc: "Capital city of Kachin State",
+      },
+    ],
+    food: [{ name: "Kachin Traditional Food", img: "images/kachin.jpg" }],
+    tourism: "Myitsone and surrounding natural beauty.",
   },
 
   MM12: {
     name: "Kayah State",
+    bgImg: "./photo/Kayah/overview.jpg",
     overview:
       "Kayah is the smallest state and known for its ethnic traditions.",
-    population: "0.3 million",
-    capital: "Loikaw",
-    region: "Eastern Myanmar",
-    cities: [{ name: "Loikaw", img: "./photo/kayah/loikaw.jpg" }],
-    cultureImg: "images/kayah.jpg",
-    cultureTags: ["Ethnic Groups"],
+    cities: [
+      {
+        name: "LoiKaw",
+        img: "./photo/Kayah/button.jpg",
+        bgImg: "./photo/Kayah/button.jpg",
+        desc: "Capital city of Kayah State",
+      },
+    ],
     food: [{ name: "Traditional Rice Dishes", img: "images/rice.jpg" }],
-    temp: "28°C",
-    humidity: "60%",
-    tourismImg: "images/loikaw.jpg",
     tourism: "Taung Kwe Pagoda.",
   },
 
   MM13: {
     name: "Kayin State",
+    bgImg: "./photo/kayin/overview.jpg",
     overview: "Kayin State is famous for limestone mountains and caves.",
-    population: "1.6 million",
-    capital: "Hpa-An",
-    region: "Southeast Myanmar",
-    cities: [{ name: "Hpa-An", img: "./photo/kayin/hpaan.jpg" }],
-    cultureImg: "images/kayin.jpg",
-    cultureTags: ["Nature", "Caves"],
+    cities: [
+      {
+        name: "Hpa-an",
+        img: "./photo/kayin/button.jpg",
+        bgImg: "./photo/kayin/button.jpg",
+        desc: "Capital city of Kayin State",
+      },
+    ],
     food: [{ name: "Karen Food", img: "images/karen.jpg" }],
-    temp: "29°C",
-    humidity: "70%",
-    tourismImg: "images/saddan.jpg",
     tourism: "Saddan Cave.",
   },
 
   MM14: {
     name: "Chin State",
+    bgImg: "./photo/chin/overview.jpg",
     overview:
       "Chin State is mountainous and known for its traditional tribes and culture.",
-    population: "0.5 million",
-    capital: "Hakha",
-    region: "Western Myanmar",
-    cities: [{ name: "Hakha", img: "./photo/chin/hakha.jpg" }],
-    cultureImg: "images/chin.jpg",
-    cultureTags: ["Mountains", "Tribal Culture"],
+    cities: [
+      {
+        name: "Hakha",
+        img: "./photo/chin/button.jpg",
+        bgImg: "./photo/chin/button.jpg",
+        desc: "Capital of Chin State",
+      },
+    ],
     food: [{ name: "Chin Traditional Food", img: "images/chin-food.jpg" }],
-    temp: "20°C",
-    humidity: "60%",
-    tourismImg: "images/victoria.jpg",
     tourism: "Mount Victoria.",
   },
 
   MM15: {
     name: "Mon State",
+    bgImg: "./photo/Mon/overview.jpg",
     overview:
       "Mon State is known for its ancient Mon culture and coastal beauty.",
-    population: "2.1 million",
-    capital: "Mawlamyine",
-    region: "Southern Myanmar",
-    cities: [{ name: "Mawlamyine", img: "./photo/mon/mawlamyine.jpg" }],
-    cultureImg: "images/mon.jpg",
-    cultureTags: ["Ancient Culture"],
+    cities: [
+      {
+        name: "Mawlamyine",
+        img: "./photo/Mon/button.jpg",
+        bgImg: "./photo/Mon/button.jpg",
+        desc: "Capital of Mon State",
+      },
+    ],
     food: [{ name: "Mon Cuisine", img: "images/mon-food.jpg" }],
-    temp: "30°C",
-    humidity: "75%",
-    tourismImg: "images/kyaiktiyo.jpg",
     tourism: "Golden Rock.",
   },
 
   MM16: {
     name: "Rakhine State",
+    bgImg: "./photo/rakhine/overview.jpg",
     overview:
       "Rakhine State is a coastal state known for beaches and ancient temples.",
-    population: "3.2 million",
-    capital: "Sittwe",
-    region: "Western Myanmar",
-    cities: [{ name: "Sittwe", img: "./photo/rakhine/sittwe.jpg" }],
-    cultureImg: "images/rakhine.jpg",
-    cultureTags: ["Coastal", "History"],
+    cities: [
+      {
+        name: "Sittwe",
+        img: "./photo/rakhine/button.jpg",
+        bgImg: "./photo/rakhine/button.jpg",
+        desc: "Capital of Rakhine State",
+      },
+    ],
     food: [{ name: "Rakhine Mont Di", img: "images/montdi.jpg" }],
-    temp: "30°C",
-    humidity: "80%",
-    tourismImg: "images/ngapali.jpg",
     tourism: "Ngapali Beach.",
   },
 
@@ -321,38 +225,15 @@ const regionData = {
     bgImg: "./photo/shan state/overview/overview.jpg",
     overview:
       "Shan State is the largest state in Myanmar, known for mountains, ethnic diversity, and Inle Lake.",
-    population: "5.8 million",
-    capital: "Taunggyi",
-    region: "Eastern Myanmar",
     cities: [
       {
         name: "Taunggyi",
-
         img: "./photo/shan state/3button/Taunggyi.jpg",
-
         bgImg: "./photo/shan state/3button/Taunggyi.jpg",
-
-        desc: "Beautiful capital of Shan State",
-      },
-      {
-        name: "Lashio",
-        img: "./photo/shan state/3button/Lashio.jpg",
-        bgImg: "./photo/shan state/3button/Lashio.jpg",
-        desc: "Trade city near China border",
-      },
-      {
-        name: "Kengtung",
-        img: "./photo/shan state/3button/Kentung.jpg",
-        bgImg: "./photo/shan state/3button/Kentung.jpg",
-        desc: "Cultural eastern Shan city",
+        desc: "Capital of Shan State",
       },
     ],
-    cultureImg: "images/shan.jpg",
-    cultureTags: ["Ethnic Groups", "Traditions"],
     food: [{ name: "Shan Noodles", img: "images/shan-noodle.jpg" }],
-    temp: "28°C",
-    humidity: "70%",
-    tourismImg: "images/inle.jpg",
     tourism: "Inle Lake.",
   },
 };
@@ -361,357 +242,98 @@ let currentState = null;
 let currentRegionData = null;
 let currentCityData = null;
 let cityExplorerOpen = false;
-let lastScrollY = 0;
-let hasScrolledCity = false;
-let hiddenCategory = null;
 let visibleCategories = [];
 let currentCityImage = "";
-
 const cityCategoryData = {};
-
-cityCategoryData.SAGAING = {
+cityCategoryData.YANGON = {
   Tourism: {
     title: "Top Spots",
     items: [
-      { title: "Sagaing Hills", desc: "Hilltop views and many monasteries." },
-      { title: "U Min Thonze", desc: "Cave pagoda with 45 Buddha images." },
       {
-        title: "Soon U Ponya Shin",
-        desc: "Golden stupa with panoramic views.",
+        title: "Shwedagon",
+        desc: "The most sacred pagoda in Myanmar.\nCovered in gold with stunning city views.",
+        img: "./photo/yangon/Shwedagon Pagoda.jpg",
+      },
+      {
+        title: "Sule Pagoda",
+        desc: "Historic pagoda in downtown Yangon.\nSurrounded by busy roads and colonial buildings.",
+        img: "./photo/yangon/Sule Pagoda.jpg",
+      },
+      {
+        title: "Yangon Circular Railway",
+        desc: "A slow train ride around the city.\nShows daily life and local markets.",
+        img: "./photo/yangon/Yangon Circular Railway.jpg",
+      },
+      {
+        title: "Bogyoke Aung San Market",
+        desc: "Famous market for souvenirs and gems.\nGreat place to shop traditional items.",
+        img: "./photo/yangon/Bogyoke Aung San Market.jpg",
+      },
+      {
+        title: "Kandawgyi Lake",
+        desc: "Peaceful lake with scenic views.\nPerfect for relaxing and sunset walks.",
+        img: "./photo/yangon/Kandawgyi Lake.jpg",
       },
     ],
   },
   Food: {
     title: "Local Taste",
     items: [
-      { title: "Monywa Noodles", desc: "Regional noodles served with herbs." },
-      { title: "Tea Leaf Salad", desc: "Crisp, tangy laphet thoke." },
-      { title: "River Fish Curry", desc: "Fresh Chindwin river catch." },
-    ],
-  },
-  Culture: {
-    title: "Culture",
-    items: [
-      { title: "Monastic Life", desc: "Famous for meditation centers." },
-      { title: "River Markets", desc: "Traditional trade along the river." },
-      { title: "Crafts", desc: "Lacquer and bamboo weaving." },
-    ],
-  },
-  Clothes: {
-    title: "Traditional Wear",
-    items: [
-      { title: "Cotton Longyi", desc: "Everyday wear for men and women." },
-      { title: "Handwoven Shawls", desc: "Simple, warm local textiles." },
-      { title: "Monk Robes", desc: "Deep maroon robes in temples." },
-    ],
-  },
-  Event: {
-    title: "Events",
-    items: [
-      { title: "Pagoda Festivals", desc: "Seasonal temple celebrations." },
-      { title: "Thingyan", desc: "Water festival in April." },
-      { title: "Tazaungdaing", desc: "Hot-air balloons and lights." },
-    ],
-  },
-};
-
-cityCategoryData.MONYWA = {
-  Tourism: {
-    title: "Top Spots",
-    items: [
-      { title: "Pho Win Taung", desc: "Sandstone caves with murals." },
-      { title: "Thanboddhay", desc: "Colorful pagoda complex." },
-      { title: "Chindwin River", desc: "Boat rides at sunset." },
-    ],
-  },
-  Food: {
-    title: "Local Taste",
-    items: [
-      { title: "Monywa Noodles", desc: "Famous regional noodle dish." },
-      { title: "Palm Sugar", desc: "Sweet local jaggery." },
-      { title: "Fried Street Snacks", desc: "Crispy bites at markets." },
-    ],
-  },
-  Culture: {
-    title: "Culture",
-    items: [
-      { title: "River Trading", desc: "Busy docks and markets." },
-      { title: "Religious Art", desc: "Murals and statues in caves." },
-      { title: "Local Markets", desc: "Everyday life and crafts." },
-    ],
-  },
-  Clothes: {
-    title: "Traditional Wear",
-    items: [
-      { title: "Patterned Longyi", desc: "Bold checks and stripes." },
-      { title: "Cotton Shirts", desc: "Light clothing for dry weather." },
-      { title: "Headscarves", desc: "Sun protection for vendors." },
+      {
+        title: "Mohinga",
+        desc: "Myanmar’s national dish with fish soup.\nUsually eaten as a breakfast meal.",
+        img: "./photo/yangon/Mohinga.jpg",
+      },
+      {
+        title: "Ohn No Khao Swe",
+        desc: "Coconut chicken noodle soup.\nRich, creamy and slightly spicy flavor.",
+        img: "./photo/yangon/Ohn No Khao Swe.jpg",
+      },
+      {
+        title: "Laphet Thoke",
+        desc: "Famous tea leaf salad.\nMixed with nuts and crunchy toppings.",
+        img: "./photo/yangon/Laphet Thoke.jpg",
+      },
+      {
+        title: "Street BBQ",
+        desc: "Grilled meats and skewers.\nPopular street food at night.",
+        img: "./photo/yangon/Shwedagon Pagoda.jpg",
+      },
+      {
+        title: "Mont Lin Mayar",
+        desc: "Crispy street snack with fillings.\nOften made with eggs or beans.",
+        img: "./photo/yangon/Mont Lin Mayar.jpg",
+      },
     ],
   },
   Event: {
     title: "Events",
     items: [
-      { title: "Pagoda Fairs", desc: "Food, music, and prayers." },
-      { title: "Thingyan", desc: "City-wide water festival." },
-      { title: "Village Fetes", desc: "Seasonal community gatherings." },
-    ],
-  },
-};
-
-cityCategoryData.SHWEBO = {
-  Tourism: {
-    title: "Top Spots",
-    items: [
-      { title: "Royal Heritage", desc: "Historic royal city of Konbaung." },
-      { title: "Shwebo Moat", desc: "Old city walls and moat." },
-      { title: "Local Pagodas", desc: "Classic central Myanmar shrines." },
-    ],
-  },
-  Food: {
-    title: "Local Taste",
-    items: [
-      { title: "Rice Dishes", desc: "Hearty meals from nearby farms." },
-      { title: "Sesame Snacks", desc: "Roasted and sweet treats." },
-      { title: "Pickled Tea", desc: "Tangy laphet sides." },
-    ],
-  },
-  Culture: {
-    title: "Culture",
-    items: [
-      { title: "Royal History", desc: "Palace-era legacy." },
-      { title: "Traditional Markets", desc: "Local trade and crafts." },
-      { title: "Monasteries", desc: "Quiet study centers." },
-    ],
-  },
-  Clothes: {
-    title: "Traditional Wear",
-    items: [
-      { title: "Plain Longyi", desc: "Simple, everyday patterns." },
-      { title: "Cotton Jackets", desc: "Light layers in cool season." },
-      { title: "Handwoven Tops", desc: "Local tailoring styles." },
-    ],
-  },
-  Event: {
-    title: "Events",
-    items: [
-      { title: "Pagoda Festival", desc: "Annual temple celebrations." },
-      { title: "Full Moon Nights", desc: "Community prayers and food." },
-      { title: "Harvest Thanksgivings", desc: "Seasonal village events." },
-    ],
-  },
-};
-
-cityCategoryData.BAGO = {
-  Tourism: {
-    title: "Top Spots",
-    items: [
-      { title: "Shwemawdaw", desc: "One of Myanmar’s tallest stupas." },
-      { title: "Kyaik Pun", desc: "Four seated Buddha statues." },
-      { title: "Kanbawzathadi", desc: "Ancient palace grounds." },
-    ],
-  },
-  Food: {
-    title: "Local Taste",
-    items: [
-      { title: "Bago Curries", desc: "Rich and mildly spiced." },
-      { title: "Rice & Fish", desc: "Delta-style meals." },
-      { title: "Street Snacks", desc: "Fritters and noodles." },
-    ],
-  },
-  Culture: {
-    title: "Culture",
-    items: [
-      { title: "Mon Heritage", desc: "Ancient Mon traditions." },
-      { title: "Pagoda Pilgrims", desc: "Busy religious life." },
-      { title: "Local Handicraft", desc: "Wood and bamboo works." },
-    ],
-  },
-  Clothes: {
-    title: "Traditional Wear",
-    items: [
-      { title: "Classic Longyi", desc: "Everyday Mon-Myanmar styles." },
-      { title: "Silk Scarves", desc: "Light, colorful accessories." },
-      { title: "Temple Attire", desc: "Modest clothing for visits." },
-    ],
-  },
-  Event: {
-    title: "Events",
-    items: [
-      { title: "Pagoda Festival", desc: "Shwemawdaw celebrations." },
-      { title: "Thingyan", desc: "Water festival in April." },
-      { title: "Thadingyut", desc: "Festival of lights." },
-    ],
-  },
-};
-
-cityCategoryData.PYAY = {
-  Tourism: {
-    title: "Top Spots",
-    items: [
-      { title: "Sri Ksetra", desc: "UNESCO ancient Pyu city." },
-      { title: "Bawbawgyi", desc: "Iconic Pyu stupa." },
-      { title: "Akauktaung", desc: "Cliffside Buddha carvings." },
-    ],
-  },
-  Food: {
-    title: "Local Taste",
-    items: [
-      { title: "Pyay Rice", desc: "Famous regional rice dishes." },
-      { title: "River Fish", desc: "Fresh Ayeyarwady catch." },
-      { title: "Tea Leaf Salad", desc: "Crisp, nutty flavors." },
-    ],
-  },
-  Culture: {
-    title: "Culture",
-    items: [
-      { title: "Pyu History", desc: "Ancient urban heritage." },
-      { title: "River Life", desc: "Markets and ferries." },
-      { title: "Local Crafts", desc: "Handmade souvenirs." },
-    ],
-  },
-  Clothes: {
-    title: "Traditional Wear",
-    items: [
-      { title: "Cotton Longyi", desc: "Light for warm weather." },
-      { title: "Woven Shawls", desc: "Simple regional textiles." },
-      { title: "Festive Wear", desc: "Bright patterns for events." },
-    ],
-  },
-  Event: {
-    title: "Events",
-    items: [
-      { title: "Sri Ksetra Fest", desc: "Cultural exhibitions." },
-      { title: "Pagoda Fairs", desc: "Food stalls and music." },
-      { title: "Full Moon Feast", desc: "Community gatherings." },
-    ],
-  },
-};
-
-cityCategoryData.TAUNGOO = {
-  Tourism: {
-    title: "Top Spots",
-    items: [
-      { title: "Taungoo Walls", desc: "Historic city gates." },
-      { title: "Shwesandaw", desc: "Sacred pagoda site." },
-      { title: "Kaytumadi Lake", desc: "Relaxed lake views." },
-    ],
-  },
-  Food: {
-    title: "Local Taste",
-    items: [
-      { title: "Town Curries", desc: "Mild central Myanmar style." },
-      { title: "Rice Noodles", desc: "Simple street bowls." },
-      { title: "Sweet Snacks", desc: "Local desserts and jaggery." },
-    ],
-  },
-  Culture: {
-    title: "Culture",
-    items: [
-      { title: "Royal Past", desc: "Taungoo Dynasty legacy." },
-      { title: "Monasteries", desc: "Traditional learning centers." },
-      { title: "Market Life", desc: "Daily trading culture." },
-    ],
-  },
-  Clothes: {
-    title: "Traditional Wear",
-    items: [
-      { title: "Plain Longyi", desc: "Everyday wear." },
-      { title: "Cotton Shirts", desc: "Light, breathable fabrics." },
-      { title: "Festival Attire", desc: "Bright color accents." },
-    ],
-  },
-  Event: {
-    title: "Events",
-    items: [
-      { title: "Pagoda Festival", desc: "Seasonal temple fair." },
-      { title: "Thingyan", desc: "Traditional water festival." },
-      { title: "Local Sports", desc: "Community games and shows." },
-    ],
-  },
-};
-
-cityCategoryData.MAGWAY = {
-  Tourism: {
-    title: "Top Spots",
-    items: [
-      { title: "Myathalun", desc: "Iconic riverside stupa." },
-      { title: "Ayeyarwady Bank", desc: "Sunset river walks." },
-      { title: "Town Viewpoints", desc: "City and river panoramas." },
-    ],
-  },
-  Food: {
-    title: "Local Taste",
-    items: [
-      { title: "Sesame Snacks", desc: "Dry-zone specialty." },
-      { title: "Bean Dishes", desc: "Hearty local meals." },
-      { title: "Tea Shop Plates", desc: "Classic Burmese breakfast." },
-    ],
-  },
-  Culture: {
-    title: "Culture",
-    items: [
-      { title: "Dry Zone Life", desc: "Agriculture and oil fields." },
-      { title: "Pagoda Visits", desc: "Active religious community." },
-      { title: "Local Markets", desc: "Busy daily trade." },
-    ],
-  },
-  Clothes: {
-    title: "Traditional Wear",
-    items: [
-      { title: "Cotton Longyi", desc: "Comfortable in hot weather." },
-      { title: "Light Shawls", desc: "Sun protection layers." },
-      { title: "Simple Weaves", desc: "Local cotton textiles." },
-    ],
-  },
-  Event: {
-    title: "Events",
-    items: [
-      { title: "Pagoda Fair", desc: "Food and cultural shows." },
-      { title: "Thingyan", desc: "City-wide celebrations." },
-      { title: "Harvest Events", desc: "Seasonal gatherings." },
-    ],
-  },
-};
-
-cityCategoryData.PAKOKKU = {
-  Tourism: {
-    title: "Top Spots",
-    items: [
-      { title: "Thiho Shin", desc: "Historic Pakokku pagoda." },
-      { title: "Riverside", desc: "Boat rides and markets." },
-      { title: "Old Town", desc: "Traditional neighborhoods." },
-    ],
-  },
-  Food: {
-    title: "Local Taste",
-    items: [
-      { title: "Pakokku Ta Pae", desc: "Local snack tradition." },
-      { title: "Sesame Sweets", desc: "Dry-zone specialty." },
-      { title: "Street Noodles", desc: "Simple, flavorful bowls." },
-    ],
-  },
-  Culture: {
-    title: "Culture",
-    items: [
-      { title: "River Trade", desc: "Busy docks and boats." },
-      { title: "Monasteries", desc: "Many learning centers." },
-      { title: "Craft Markets", desc: "Handmade local goods." },
-    ],
-  },
-  Clothes: {
-    title: "Traditional Wear",
-    items: [
-      { title: "Patterned Longyi", desc: "Bold stripes and checks." },
-      { title: "Cotton Jackets", desc: "Light layers at night." },
-      { title: "Woven Scarves", desc: "Local cotton pieces." },
-    ],
-  },
-  Event: {
-    title: "Events",
-    items: [
-      { title: "Pagoda Festival", desc: "Annual temple fair." },
-      { title: "Thingyan", desc: "Water festival." },
-      { title: "Boat Races", desc: "Seasonal river races." },
+      {
+        title: "Thingyan Water Festival",
+        desc: "Myanmar New Year water festival.\nPeople celebrate by splashing water.",
+        img: "./photo/yangon/Thingyan Water Festival.jpg",
+      },
+      {
+        title: "Thadingyut Festival",
+        desc: "Festival of lights after Buddhist Lent.\nHomes and streets are decorated brightly.",
+        img: "./photo/yangon/Thadingyut Festival.jpg",
+      },
+      {
+        title: "Tazaungdaing Festival",
+        desc: "Festival with lights and hot air balloons.\nIncludes traditional offering ceremonies.",
+        img: "./photo/yangon/Tazaungdaing Festival.jpg",
+      },
+      {
+        title: "Shwedagon Pagoda Festival",
+        desc: "Large religious festival at Shwedagon.\nFilled with food stalls and activities.",
+        img: "./photo/yangon/Shwedagon Pagoda Festival.jpg",
+      },
+      {
+        title: "Yangon Street Food Festival",
+        desc: "Food event with many local dishes.\nA great place to try street food.",
+        img: "./photo/yangon/Yangon Street Food Festival.jpg",
+      },
     ],
   },
 };
@@ -720,213 +342,372 @@ cityCategoryData.MANDALAY = {
   Tourism: {
     title: "Top Spots",
     items: [
-      { title: "Mandalay Hill", desc: "Sunrise and sunset views." },
-      { title: "Royal Palace", desc: "Historic palace complex." },
-      { title: "Kuthodaw", desc: "World’s largest book." },
+      {
+        title: "Mandalay",
+        desc: "Historic royal city of Myanmar.\nHome to Mandalay Hill and the old palace.",
+        img: "./photo/Mandalay_region/Mandalay .jpg",
+      },
+      {
+        title: "Pyin Oo Lwin",
+        desc: "Cool hill town with colonial charm.\nKnown for gardens and fresh climate.",
+        img: "./photo/Mandalay_region/pyinoolwin.jpg",
+      },
+      {
+        title: "Mingun",
+        desc: "Ancient riverside site.\nFamous for Mingun Bell and pagoda ruins.",
+        img: "./photo/Mandalay_region/mingun.jpg",
+      },
+      {
+        title: "Amarapura",
+        desc: "Former royal capital.\nKnown for U Bein Bridge and sunset views.",
+        img: "./photo/Mandalay_region/amarabura.jpg",
+      },
+      {
+        title: "Inwa",
+        desc: "Ancient Ava city ruins.\nExplored by horse cart rides.",
+        img: "./photo/Mandalay_region/inwa.jpg",
+      },
     ],
   },
+
   Food: {
     title: "Local Taste",
     items: [
-      { title: "Mee Shay", desc: "Famous Mandalay noodles." },
-      { title: "Tea Shops", desc: "Snacks and sweet tea." },
-      { title: "Street BBQ", desc: "Skewers and grills." },
+      {
+        title: "Mandalay Htoe Mont",
+        desc: "Traditional sweet rice cake.\nRich, buttery and slightly sticky.",
+        img: "./photo/Mandalay_region/Htoe Mont.jpg",
+      },
+      {
+        title: "Mee Shay",
+        desc: "Rice noodles with pork and oil.\nSimple and flavorful local dish.",
+        img: "./photo/Mandalay_region/Mee Shay.jpg",
+      },
+      {
+        title: "Mont Di",
+        desc: "Tangy noodles with fish soup.\nPopular Upper Myanmar dish.",
+        img: "./photo/Mandalay_region/Mont Di.jpg",
+      },
+      {
+        title: "Oli Rice",
+        desc: "Rice mixed with oil and peas.\nCommon everyday Mandalay meal.",
+        img: "./photo/Mandalay_region/Oli Rice.jpg",
+      },
+      {
+        title: "Mandalay Mont ti",
+        desc: "Rice noodle salad with toppings.\nCrunchy and slightly spicy taste.",
+        img: "./photo/Mandalay_region/Mandalay Mont ti.jpg",
+      },
     ],
   },
-  Culture: {
-    title: "Culture",
-    items: [
-      { title: "Royal Heritage", desc: "Capital of last dynasty." },
-      { title: "Craft Villages", desc: "Gold leaf, marionettes." },
-      { title: "Monastic Schools", desc: "Traditional education hubs." },
-    ],
-  },
-  Clothes: {
-    title: "Traditional Wear",
-    items: [
-      { title: "Silk Longyi", desc: "Mandalay silk patterns." },
-      { title: "Traditional Blouses", desc: "Classic Myanmar styles." },
-      { title: "Festival Wear", desc: "Bright, elegant textiles." },
-    ],
-  },
+
   Event: {
     title: "Events",
     items: [
-      { title: "Mahamuni Festival", desc: "Major pilgrimage event." },
-      { title: "Thingyan", desc: "Water festival." },
-      { title: "Thadingyut", desc: "Festival of lights." },
+      {
+        title: "Mahamuni Pagoda Festival",
+        desc: "Religious festival at Mahamuni.\nIncludes prayers and night markets.",
+        img: "./photo/Mandalay_region/Mahamuni Pagoda Festival.jpg",
+      },
+      {
+        title: "Mandalay Thingyan",
+        desc: "Water festival in Mandalay.\nCelebrated with music and crowds.",
+        img: "./photo/Mandalay_region/Mandalay Thingyan.jpg",
+      },
+      {
+        title: "Taungbyone Nat Festival",
+        desc: "Famous spirit worship festival.\nIncludes dancing and ceremonies.",
+        img: "./photo/Mandalay_region/Taungbyone Nat Festival.jpg",
+      },
+      {
+        title: "Yadanagu Nat Festival",
+        desc: "Traditional nat spirit event.\nLocals honor guardian spirits.",
+        img: "./photo/Mandalay_region/Yadanagu Nat Festival.jpg",
+      },
+      {
+        title: "Thadingyut Festival Mandalay.",
+        desc: "Festival of lights celebration.\nMarks the end of Buddhist Lent.",
+        img: "./photo/Mandalay_region/Thadingyut Festival Mandalay.jpg",
+      },
     ],
   },
 };
 
-cityCategoryData.AMARAPURA = {
+cityCategoryData.MONYWA = {
   Tourism: {
     title: "Top Spots",
     items: [
-      { title: "U Bein Bridge", desc: "Iconic teak bridge." },
-      { title: "Mahagandayon", desc: "Famous monastery." },
-      { title: "Taungthaman Lake", desc: "Sunset lakeside views." },
+      {
+        title: "Bodhi Tataung",
+        desc: "Home to giant Buddha statues.\nOne of the tallest in Southeast Asia.",
+        img: "./photo/Sagaing/Bodhi.jpg",
+      },
+      {
+        title: "Hpo Win Daung Caves",
+        desc: "Cave complex with ancient murals.\nShows detailed Buddhist paintings.",
+        img: "./photo/Sagaing/Hpo.jpg",
+      },
+      {
+        title: "Shwe Ba Taung",
+        desc: "Rocky hills with monastery caves.\nOffers scenic views of the river.",
+        img: "./photo/Sagaing/Shwe.jpg",
+      },
+      {
+        title: "Mohnyin Thambuddhei Pagoda",
+        desc: "Colorful pagoda with many Buddha images.\nUnique and crowded with statues.",
+        img: "./photo/Sagaing/Mohnyin.jpg",
+      },
+      {
+        title: "Thanboddhay Pagoda",
+        desc: "Famous pagoda with thousands of images.\nBright and eye-catching design.",
+        img: "./photo/Sagaing/Tanboddhay.jpg",
+      },
     ],
   },
   Food: {
     title: "Local Taste",
     items: [
-      { title: "Lake Fish", desc: "Fresh and grilled." },
-      { title: "Tea Shop Snacks", desc: "Noodles and fritters." },
-      { title: "Traditional Sweets", desc: "Local desserts." },
-    ],
-  },
-  Culture: {
-    title: "Culture",
-    items: [
-      { title: "Monastic Life", desc: "Large monk community." },
-      { title: "Bridge Walks", desc: "Daily local life." },
-      { title: "Weaving", desc: "Textile traditions nearby." },
-    ],
-  },
-  Clothes: {
-    title: "Traditional Wear",
-    items: [
-      { title: "Weaved Longyi", desc: "Handloom patterns." },
-      { title: "Cotton Blouses", desc: "Simple local styles." },
-      { title: "Silk Scarves", desc: "Light, elegant wraps." },
+      {
+        title: "Htamin jin",
+        desc: "Fermented rice mixed with fish.\nSour and traditional local flavor.",
+        img: "./photo/Sagaing/Htamin jin.jpg",
+      },
+      {
+        title: "Nga Phe Thoke",
+        desc: "Fish paste salad with spices.\nStrong taste and popular locally.",
+        img: "./photo/Sagaing/Nga Phe Thoke.jpg",
+      },
+      {
+        title: "Sagaing Mont Ti",
+        desc: "Rice noodles with light broth.\nSimple and refreshing dish.",
+        img: "./photo/Sagaing/Sagaing Mont Ti.jpg",
+      },
+      {
+        title: "Shwe Yin Aye",
+        desc: "Sweet coconut dessert drink.\nIncludes jelly, rice, and coconut milk.",
+        img: "./photo/Sagaing/Shwe Yin Aye.jpg",
+      },
+      {
+        title: "Ngapi Yay",
+        desc: "Fish paste dip with vegetables.\nServed with rice and side dishes.",
+        img: "./photo/Sagaing/Ngapi Yay.jpg",
+      },
     ],
   },
   Event: {
     title: "Events",
     items: [
-      { title: "Monastic Ceremony", desc: "Regular alms rituals." },
-      { title: "Bridge Festival", desc: "Cultural gatherings." },
-      { title: "Full Moon Prayers", desc: "Community worship." },
+      {
+        title: "Thingyan Water Festival",
+        desc: "Myanmar New Year water festival.\nCelebrated with water splashing.",
+        img: "./photo/yangon/Thingyan Water Festival.jpg",
+      },
+      {
+        title: "Thadingyut Festival",
+        desc: "Festival of lights after Lent.\nHomes and streets shine brightly.",
+        img: "./photo/yangon/Thadingyut Festival.jpg",
+      },
+      {
+        title: "Tazaungdaing Festival",
+        desc: "Festival with lights and offerings.\nIncludes traditional ceremonies.",
+        img: "./photo/yangon/Tazaungdaing Festival.jpg",
+      },
+      {
+        title: "Bodhi Tataung Pagoda Festival",
+        desc: "Religious festival at Bodhi Tataung.\nCrowds gather for prayers and food stalls.",
+        img: "./photo/Sagaing/Bodhi Fes.jpg",
+      },
+      {
+        title: "Kaunghmudaw Pagoda Festival",
+        desc: "Local pagoda celebration event.\nIncludes markets and community gatherings.",
+        img: "./photo/Sagaing/pagoda fes.jpg",
+      },
     ],
   },
 };
 
-cityCategoryData.DAWEI = {
+cityCategoryData.MAGWAY = {
   Tourism: {
     title: "Top Spots",
     items: [
-      { title: "Maungmagan Beach", desc: "Relaxed coastal beach." },
-      { title: "Dawei Market", desc: "Local seafood and produce." },
-      { title: "Coastal Temples", desc: "Small seaside pagodas." },
+      {
+        title: "Mya Tha Lun Pagoda",
+        desc: "Famous riverside pagoda in Magway.\nOffers beautiful sunset views.",
+        img: "./photo/Magway/Myat Tha Lon.jpg",
+      },
+      {
+        title: "Shwesettaw Pagoda",
+        desc: "Sacred site with Buddha footprints.\nLocated near the Mann River.",
+        img: "./photo/Magway/Shwe Sat Taw.jpg",
+      },
+      {
+        title: "Minbu Mud Volcano",
+        desc: "Natural mud volcano attraction.\nVisitors can see bubbling mud pools.",
+        img: "./photo/Magway/Minbu MUb.jpg",
+      },
+      {
+        title: "Beikthano Ancient City",
+        desc: "Ancient Pyu city ruins.\nOne of Myanmar’s earliest civilizations.",
+        img: "./photo/Magway/Beikthano.jpg",
+      },
+      {
+        title: "Magway Bridge",
+        desc: "Bridge across the Irrawaddy River.\nOffers wide river and city views.",
+        img: "./photo/Magway/Bridge.jpg",
+      },
     ],
   },
   Food: {
     title: "Local Taste",
     items: [
-      { title: "Seafood Dishes", desc: "Fresh from the coast." },
-      { title: "Dawei Noodles", desc: "Regional noodle style." },
-      { title: "Pickled Foods", desc: "Tangy local sides." },
-    ],
-  },
-  Culture: {
-    title: "Culture",
-    items: [
-      { title: "Coastal Life", desc: "Fishing and markets." },
-      { title: "Local Crafts", desc: "Wood and shell items." },
-      { title: "Traditional Music", desc: "Regional performances." },
-    ],
-  },
-  Clothes: {
-    title: "Traditional Wear",
-    items: [
-      { title: "Light Longyi", desc: "Comfortable seaside wear." },
-      { title: "Cotton Shirts", desc: "Breathable fabrics." },
-      { title: "Sea Breeze Shawls", desc: "Light wraps." },
+      {
+        title: "Sesame Snacks",
+        desc: "Famous dry-zone sesame treats.\nSweet and crunchy texture.",
+        img: "./photo/Magway/Sesame snak.jpg",
+      },
+      {
+        title: "Magway Mont Di",
+        desc: "Rice noodle dish with rich broth.\nPopular local comfort food.",
+        img: "./photo/Magway/Mont ti.jpg",
+      },
+      {
+        title: "Myanmar Curry",
+        desc: "Traditional curry with rice.\nServed with many side dishes.",
+        img: "./photo/Magway/Myanmar Curry.jpg",
+      },
+      {
+        title: "Bean Dishes",
+        desc: "Various dishes made with beans.\nCommon in central Myanmar meals.",
+        img: "./photo/Magway/Bean.jpg",
+      },
+      {
+        title: "Street BBQ skewers",
+        desc: "Grilled meat on sticks.\nEasy and popular street food.",
+        img: "./photo/Magway/BBQ.jpg",
+      },
     ],
   },
   Event: {
     title: "Events",
     items: [
-      { title: "Seaside Festivals", desc: "Community celebrations." },
-      { title: "Thingyan", desc: "Water festival." },
-      { title: "Pagoda Fair", desc: "Seasonal temple events." },
+      {
+        title: "Mya Tha Lun Pagoda Festival",
+        desc: "Pagoda festival with food stalls.\nIncludes local performances.",
+        img: "./photo/Magway/Mya Tha Lon fes.jpg",
+      },
+      {
+        title: "Shwesettaw Pagoda Festival",
+        desc: "Large religious gathering.\nPilgrims visit and camp nearby.",
+        img: "./photo/Magway/Shwe Sat Taw fes.jpg",
+      },
+      {
+        title: "Thingyan Water Festival",
+        desc: "Myanmar New Year celebration.\nPeople enjoy water splashing.",
+        img: "./photo/yangon/Thingyan Water Festival.jpg",
+      },
+      {
+        title: "Tazaungdaing Festival",
+        desc: "Festival of lights and offerings.\nCelebrated with lanterns and robes.",
+        img: "./photo/yangon/Tazaungdaing Festival.jpg",
+      },
+      {
+        title: "Thadingyut Festival",
+        desc: "Lighting festival after Lent.\nHomes are decorated with lights.",
+        img: "./photo/yangon/Thadingyut Festival.jpg",
+      },
     ],
   },
 };
 
-cityCategoryData.MYEIK = {
+cityCategoryData.BAGO = {
   Tourism: {
     title: "Top Spots",
     items: [
-      { title: "Myeik Archipelago", desc: "Island-hopping paradise." },
-      { title: "Seaside Town", desc: "Harbor views and sunsets." },
-      { title: "Local Piers", desc: "Boats and fishing life." },
+      {
+        title: "Shwemawdaw",
+        desc: "One of the tallest pagodas in Myanmar.\nImportant religious site in Bago.",
+        img: "./photo/Bago/shwe mawdaw.jpg",
+      },
+      {
+        title: "Kyaik Pun",
+        desc: "Pagoda with four seated Buddhas.\nEach facing a different direction.",
+        img: "./photo/Bago/Kyaik Pun Pagoda.jpg",
+      },
+      {
+        title: "Kanbawzathadi",
+        desc: "Reconstructed royal palace.\nShows history of King Bayinnaung.",
+        img: "./photo/Bago/Kanbawzathadi Palace.jpg",
+      },
+      {
+        title: "Shwe Tha Lyaung",
+        desc: "Famous reclining Buddha image.\nKnown for its large size and detail.",
+        img: "./photo/Bago/Shwethalyaung Buddha.jpg",
+      },
+      {
+        title: "Hintha Gon Pagoda",
+        desc: "Hilltop pagoda with city views.\nPeaceful and scenic location.",
+        img: "./photo/Bago/Hinthagon Pagoda.jpg",
+      },
     ],
   },
   Food: {
     title: "Local Taste",
     items: [
-      { title: "Grilled Seafood", desc: "Fresh and smoky flavors." },
-      { title: "Fish Soup", desc: "Light, coastal broths." },
-      { title: "Seaweed Dishes", desc: "Regional specialty." },
-    ],
-  },
-  Culture: {
-    title: "Culture",
-    items: [
-      { title: "Seafaring Life", desc: "Boats and island trade." },
-      { title: "Local Markets", desc: "Busy seafood bazaars." },
-      { title: "Island Traditions", desc: "Distinct coastal customs." },
-    ],
-  },
-  Clothes: {
-    title: "Traditional Wear",
-    items: [
-      { title: "Light Longyi", desc: "Breezy coastal wear." },
-      { title: "Headscarves", desc: "Sun protection by the sea." },
-      { title: "Simple Sandals", desc: "Practical daily footwear." },
-    ],
-  },
-  Event: {
-    title: "Events",
-    items: [
-      { title: "Seafood Festivals", desc: "Community celebrations." },
-      { title: "Boat Races", desc: "Seasonal harbor events." },
-      { title: "Pagoda Fairs", desc: "Local temple gatherings." },
-    ],
-  },
-};
-
-cityCategoryData.YANGON = {
-  Tourism: {
-    title: "Top Spots",
-    items: [
-      { title: "Shwedagon", desc: "Myanmar’s most famous pagoda." },
-      { title: "Sule Pagoda", desc: "Downtown landmark." },
-      { title: "Colonial Streets", desc: "Historic architecture walks." },
-    ],
-  },
-  Food: {
-    title: "Local Taste",
-    items: [
-      { title: "Mohinga", desc: "Classic breakfast soup." },
-      { title: "Street BBQ", desc: "Skewers and grills." },
-      { title: "Tea Shops", desc: "Snacks and milk tea." },
-    ],
-  },
-  Culture: {
-    title: "Culture",
-    items: [
-      { title: "Urban Life", desc: "Modern city rhythm." },
-      { title: "Colonial Heritage", desc: "Historic downtown buildings." },
-      { title: "Art Spaces", desc: "Galleries and cafes." },
-    ],
-  },
-  Clothes: {
-    title: "Traditional Wear",
-    items: [
-      { title: "Modern Longyi", desc: "City-style patterns." },
-      { title: "Office Attire", desc: "Business casual mix." },
-      { title: "Festival Outfits", desc: "Bright, formal wear." },
+      {
+        title: "Mon-style Mohinga",
+        desc: "Rich and flavorful mohinga.\nSlightly different from Yangon style.",
+        img: "./photo/Bago/Mon-style Mohinga.jpg",
+      },
+      {
+        title: "Htamin Paung",
+        desc: "Rice wrapped in banana leaves.\nSoft texture and simple taste.",
+        img: "./photo/Bago/Htamin Paung (Rice Wrap).jpg",
+      },
+      {
+        title: "Nga Baung(Fish Dish)",
+        desc: "Fish dish cooked with spices.\nPopular in Mon and Bago region.",
+        img: "./photo/Bago/. Nga Baung (Fish Dish).jpg",
+      },
+      {
+        title: "Street BBQ skewers",
+        desc: "Grilled meat sticks.\nCommon evening street snack.",
+        img: "./photo/Magway/BBQ.jpg",
+      },
+      {
+        title: "Traditional Snacks",
+        desc: "Various Myanmar sweet snacks.\nFound in local markets.",
+        img: "./photo/Bago/Traditional Snacks (Mont).jpg",
+      },
     ],
   },
   Event: {
     title: "Events",
     items: [
-      { title: "Shwedagon Festivals", desc: "Religious celebrations." },
-      { title: "Thingyan", desc: "Largest water festival." },
-      { title: "Art Fairs", desc: "Urban cultural events." },
+      {
+        title: "Thingyan Water Festival",
+        desc: "Myanmar New Year water festival.\nCelebrated with water splashing.",
+        img: "./photo/yangon/Thingyan Water Festival.jpg",
+      },
+      {
+        title: "Tazaungdaing Festival",
+        desc: "Festival with lights and offerings.\nIncludes robe donation ceremonies.",
+        img: "./photo/yangon/Tazaungdaing Festival.jpg",
+      },
+      {
+        title: "Thadingyut Festival",
+        desc: "Festival of lights after Lent.\nHomes are decorated with lights.",
+        img: "./photo/yangon/Thadingyut Festival.jpg",
+      },
+      {
+        title: "Shwe Maw Daw Festival",
+        desc: "Major pagoda festival in Bago.\nIncludes fairs and local food stalls.",
+        img: "./photo/Bago/Shwemawdaw Pagoda Festival.jpg",
+      },
+      {
+        title: "Kyaik Pun",
+        desc: "Religious gathering at Kyaik Pun.\nVisitors come for prayer and merit.",
+        img: "./photo/Bago/Kyaik Pun Pagoda.jpg",
+      },
     ],
   },
 };
@@ -935,41 +716,184 @@ cityCategoryData.PATHEIN = {
   Tourism: {
     title: "Top Spots",
     items: [
-      { title: "Ngwe Saung", desc: "Famous beach nearby." },
-      { title: "Pathein River", desc: "Riverside strolls." },
-      { title: "Umbrella Workshops", desc: "Iconic local craft." },
+      {
+        title: "Ngwe Saung Beach",
+        desc: "Beautiful white sand beach.\nPopular for relaxing and sea views.",
+        img: "./photo/Pathein/Ngwe Saung Beach.jpg",
+      },
+      {
+        title: "Chaung Tha Beach",
+        desc: "Famous local beach destination.\nGreat for seafood and activities.",
+        img: "./photo/Pathein/Chaung Tha Beach.jpg",
+      },
+      {
+        title: "Pathein",
+        desc: "City known for handmade umbrellas.\nImportant delta trading center.",
+        img: "./photo/Pathein/Pathein.jpg",
+      },
+      {
+        title: "Shwemokhtaw Pagoda",
+        desc: "Main religious site in Pathein.\nPeaceful place for worship.",
+        img: "./photo/Pathein/Shwemokhtaw Pagoda.jpg",
+      },
+      {
+        title: "Meinmahla Kyun Wildlife Sanctuary",
+        desc: "Protected mangrove forest area.\nHome to crocodiles and rare birds.",
+        img: "./photo/Pathein/Meinmahla Kyun Wildlife Sanctuary.jpg",
+      },
     ],
   },
   Food: {
     title: "Local Taste",
     items: [
-      { title: "Fish Curry", desc: "Delta-style specialty." },
-      { title: "Pathein Snacks", desc: "Market street foods." },
-      { title: "Coconut Desserts", desc: "Sweet local treats." },
-    ],
-  },
-  Culture: {
-    title: "Culture",
-    items: [
-      { title: "Delta Life", desc: "Rice fields and waterways." },
-      { title: "Umbrella Craft", desc: "Traditional handmade craft." },
-      { title: "Market Culture", desc: "Bustling daily trade." },
-    ],
-  },
-  Clothes: {
-    title: "Traditional Wear",
-    items: [
-      { title: "Colorful Longyi", desc: "Bright delta patterns." },
-      { title: "Light Cotton", desc: "Comfort for humid weather." },
-      { title: "Rain Capes", desc: "Practical monsoon wear." },
+      {
+        title: "Halawa",
+        desc: "Sweet traditional dessert.\nMade with coconut and jaggery.",
+        img: "./photo/Pathein/Halawa.jpg",
+      },
+      {
+        title: "Mohinga",
+        desc: "Fish noodle soup breakfast dish.\nPopular across Myanmar.",
+        img: "./photo/yangon/Mohinga.jpg",
+      },
+      {
+        title: "Ohn No Khao Swe",
+        desc: "Coconut chicken noodle soup.\nCreamy and flavorful meal.",
+        img: "./photo/yangon/Ohn No Khao Swe.jpg",
+      },
+      {
+        title: "Coconut Snacks",
+        desc: "Snacks made from coconut.\nSweet and common in delta region.",
+        img: "./photo/Pathein/Coconut Snacks.jpg",
+      },
+      {
+        title: "Fried Fish & Dried Fish",
+        desc: "Fish dishes from delta rivers.\nSalty and rich in flavor.",
+        img: "./photo/Pathein/Fried Fish & Dried Fish.jpg",
+      },
     ],
   },
   Event: {
     title: "Events",
     items: [
-      { title: "Pagoda Festivals", desc: "Seasonal celebrations." },
-      { title: "Boat Races", desc: "Delta river competitions." },
-      { title: "Harvest Fairs", desc: "Community gatherings." },
+      {
+        title: "Shwemokhtaw Pagoda Festival",
+        desc: "Important religious festival.\nIncludes markets and donations.",
+        img: "./photo/Pathein/Shwemokhtaw Pagoda Festival.jpg",
+      },
+      {
+        title: "Pathein Umbrella Festival",
+        desc: "Celebration of local umbrella craft.\nShows traditional skills and designs.",
+        img: "./photo/Pathein/Pathein Umbrella Festival.jpg",
+      },
+      {
+        title: "Thingyan Water Festival",
+        desc: "Myanmar New Year celebration.\nPeople enjoy water splashing.",
+        img: "./photo/yangon/Thingyan Water Festival.jpg",
+      },
+      {
+        title: "Thadingyut Festival",
+        desc: "Festival of lights after Lent.\nDecorations with candles and lights.",
+        img: "./photo/yangon/Thadingyut Festival.jpg",
+      },
+      {
+        title: "Tazaungdaing Festival",
+        desc: "Festival with lights and offerings.\nIncludes robe donation events.",
+        img: "./photo/yangon/Tazaungdaing Festival.jpg",
+      },
+    ],
+  },
+};
+
+cityCategoryData.DAWEI = {
+  Tourism: {
+    title: "Top Spots",
+    items: [
+      {
+        title: "Myeik Archipelago",
+        desc: "Group of tropical islands.\nKnown for clear water and beaches.",
+        img: "./photo/thnintharyi/Myeik Archipelago.jpg",
+      },
+      {
+        title: "Ngapali? No, Dawei Beach",
+        desc: "Quiet and less crowded beach.\nPerfect for peaceful relaxation.",
+        img: "./photo/thnintharyi/Dawei Beach.jpg",
+      },
+      {
+        title: "Maungmagan Beach",
+        desc: "Popular beach near Dawei.\nGreat for sunset and local food.",
+        img: "./photo/thnintharyi/Maungmagan Beach.jpg",
+      },
+      {
+        title: "Lampi Island Marine National Park",
+        desc: "Marine park with rich biodiversity.\nIdeal for snorkeling and nature trips.",
+        img: "./photo/thnintharyi/Lampi Island Marine National Park.jpg",
+      },
+      {
+        title: "Shin Koe Shin Pagoda",
+        desc: "Sacred pagoda near the coast.\nImportant spiritual place for locals.",
+        img: "./photo/thnintharyi/Shin Koe Shin Pagoda.jpg",
+      },
+    ],
+  },
+  Food: {
+    title: "Local Taste",
+    items: [
+      {
+        title: "Seafood (Fish, Prawn, Crab)",
+        desc: "Fresh seafood from the coast.\nCooked in many local styles.",
+        img: "./photo/thnintharyi/Seafood (Fish, Prawn, Crab).jpg",
+      },
+      {
+        title: "Mohinga",
+        desc: "Traditional fish soup noodles.\nCommon breakfast across Myanmar.",
+        img: "./photo/yangon/Mohinga.jpg",
+      },
+      {
+        title: "Coconut Rice & Curry",
+        desc: "Rice cooked with coconut milk.\nServed with flavorful curries.",
+        img: "./photo/thnintharyi/Coconut Rice & Curry.jpg",
+      },
+      {
+        title: "Dried Seafood Snacks",
+        desc: "Preserved seafood products.\nSalty and long-lasting snacks.",
+        img: "./photo/thnintharyi/Dried Seafood Snacks.jpg",
+      },
+      {
+        title: "Spicy Seafood Salad",
+        desc: "Mixed seafood with spices.\nFresh, sour and spicy taste.",
+        img: "./photo/thnintharyi/Spicy Seafood Salad.jpg",
+      },
+    ],
+  },
+  Event: {
+    title: "Events",
+    items: [
+      {
+        title: "Shin Koe Shin Pagoda Festival",
+        desc: "Religious celebration at pagoda.\nIncludes prayer and food stalls.",
+        img: "./photo/thnintharyi/Shin Koe Shin Pagoda Festival.jpg",
+      },
+      {
+        title: "Thingyan Water Festival",
+        desc: "Myanmar New Year water festival.\nCelebrated with fun and music.",
+        img: "./photo/yangon/Thingyan Water Festival.jpg",
+      },
+      {
+        title: "Thadingyut Festival",
+        desc: "Festival of lights after Lent.\nHomes shine with decorations.",
+        img: "./photo/yangon/Thadingyut Festival.jpg",
+      },
+      {
+        title: "Thingyan",
+        desc: "Traditional water celebration.\nPeople enjoy splashing water.",
+        img: "./photo/thnintharyi/Maungmagan Beach.jpg",
+      },
+      {
+        title: "Sea Gypsy (Moken) Cultural Events",
+        desc: "Cultural events of Moken people.\nShowcases sea-based lifestyle.",
+        img: "./photo/thnintharyi/Sea Gypsy (Moken) Cultural Events.jpg",
+      },
     ],
   },
 };
@@ -978,41 +902,124 @@ cityCategoryData.MYITKYINA = {
   Tourism: {
     title: "Top Spots",
     items: [
-      { title: "River Confluence", desc: "Ayeyarwady headwaters." },
-      { title: "Local Markets", desc: "Colorful border trade." },
-      { title: "Hill Views", desc: "Cool northern scenery." },
+      {
+        title: "MyitSone",
+        desc: "Confluence of Mali and N'mai rivers.\nImportant natural and cultural site.",
+        img: "./photo/Kachin State/Myitsone.jpg",
+      },
+      {
+        title: "Shwe Myint Zu Pagoda",
+        desc: "Famous riverside pagoda.\nOffers peaceful views of the Irrawaddy.",
+        img: "./photo/Kachin State/Shwe Myint Zu Pagoda.jpg",
+      },
+      {
+        title: "Putao",
+        desc: "Remote mountain town in the north.\nGateway for trekking and adventure.",
+        img: "./photo/Kachin State/Putao.jpg",
+      },
+      {
+        title: "Indawgyi Lake",
+        desc: "Largest lake in Myanmar.\nRich in wildlife and bird species.",
+        img: "./photo/Kachin State/indawgyi lake.jpg",
+      },
+      {
+        title: "Hkakabo Razi",
+        desc: "Highest mountain in Southeast Asia.\nFamous for extreme trekking routes.",
+        img: "./photo/Kachin State/Hkakabo Razi.jpg",
+      },
     ],
   },
+
   Food: {
     title: "Local Taste",
     items: [
-      { title: "Kachin Dishes", desc: "Herbs and fermented flavors." },
-      { title: "Sticky Rice", desc: "Popular northern staple." },
-      { title: "Tea Shop Meals", desc: "Warm, simple plates." },
+      {
+        title: "Kachin Traditional Rice",
+        desc: "Steamed rice with herbs and sides.\nSimple and healthy local meal.",
+        img: "./photo/Kachin State/Kachin Traditional Rice.jpg",
+      },
+      {
+        title: "Kachin Chicken Curry",
+        desc: "Spicy curry with local spices.\nRich flavor and traditional cooking.",
+        img: "./photo/Kachin State/Kachin Chicken Curry.jpg",
+      },
+      {
+        title: "Bamboo Shoot Curry",
+        desc: "Dish made with bamboo shoots.\nCommon in northern Myanmar cuisine.",
+        img: "./photo/Kachin State/Bamboo Shoot Curry.jpg",
+      },
+      {
+        title: "Kachin Pickled Tea",
+        desc: "Fermented tea leaf dish.\nServed as salad or side dish.",
+        img: "./photo/Kachin State/Kachin Pickled Tea.jpg",
+      },
+      {
+        title: "Grilled River Fish",
+        desc: "Fresh fish grilled over fire.\nSimple and smoky taste.",
+        img: "./photo/Kachin State/Grilled River Fish.jpg",
+      },
     ],
   },
-  Culture: {
-    title: "Culture",
-    items: [
-      { title: "Kachin Traditions", desc: "Music and dance heritage." },
-      { title: "Church & Festival", desc: "Strong community events." },
-      { title: "Jade Trade", desc: "Local commerce history." },
-    ],
-  },
+
   Clothes: {
     title: "Traditional Wear",
     items: [
-      { title: "Kachin Shawls", desc: "Bright woven textiles." },
-      { title: "Warm Layers", desc: "Cooler climate wear." },
-      { title: "Handmade Bags", desc: "Local woven accessories." },
+      {
+        title: "Kachin Traditional Dress",
+        desc: "Colorful woven traditional outfit.\nWorn during festivals and events.",
+        img: "./photo/Kachin State/Kachin Traditional Dress.jpg",
+      },
+      {
+        title: "Manau Costume",
+        desc: "Special costume for Manau festival.\nDecorated with bright patterns.",
+        img: "./photo/Kachin State/Manau Costume.jpg",
+      },
+      {
+        title: "Kachin Headdress",
+        desc: "Traditional headwear with beads.\nSymbol of cultural identity.",
+        img: "./photo/Kachin State/Kachin Headdress.jpg",
+      },
+      {
+        title: "Beaded Jewelry Kachin",
+        desc: "Handmade bead accessories.\nUsed in ceremonies and daily wear.",
+        img: "./photo/Kachin State/Beaded Jewelry Kachin.jpg",
+      },
+      {
+        title: "Handwoven Textiles Kachin",
+        desc: "Locally woven fabrics.\nMade using traditional looms.",
+        img: "./photo/Kachin State/Handwoven Textiles Kachin.jpg",
+      },
     ],
   },
+
   Event: {
     title: "Events",
     items: [
-      { title: "Manau Festival", desc: "Major Kachin celebration." },
-      { title: "Christmas Events", desc: "Community gatherings." },
-      { title: "New Year Fest", desc: "Traditional dances." },
+      {
+        title: "Manau Festival",
+        desc: "Largest Kachin cultural festival.\nIncludes dance and traditional rituals.",
+        img: "./photo/Kachin State/Manau Festival.jpg",
+      },
+      {
+        title: "Kachin New Year Festival",
+        desc: "Celebration of Kachin new year.\nIncludes music and cultural shows.",
+        img: "./photo/Kachin State/Kachin New Year Festival.jpg",
+      },
+      {
+        title: "Christmas in Kachin",
+        desc: "Major festival for Christian communities.\nCelebrated with church events.",
+        img: "./photo/Kachin State/Christmas in Kachin.jpg",
+      },
+      {
+        title: "Harvest Festival Kachin",
+        desc: "Celebration after harvest season.\nThanks for crops and food.",
+        img: "./photo/Kachin State/Harvest Festival Kachin.jpg",
+      },
+      {
+        title: "Church Festivals Kachin",
+        desc: "Religious gatherings in churches.\nCommunity-based celebrations.",
+        img: "./photo/Kachin State/Church Festivals Kachin.jpg",
+      },
     ],
   },
 };
@@ -1021,41 +1028,124 @@ cityCategoryData.LOIKAW = {
   Tourism: {
     title: "Top Spots",
     items: [
-      { title: "Taung Kwe", desc: "Rocky pagoda hill." },
-      { title: "Local Lakes", desc: "Peaceful lakeside views." },
-      { title: "Village Tours", desc: "Ethnic Kayah villages." },
+      {
+        title: "Taung Kwe Pagoda",
+        desc: "Pagoda built on rocky hill.\nOffers panoramic city views.",
+        img: "./photo/Kayah/Taung Kwe Pagoda.jpg",
+      },
+      {
+        title: "Seven Lakes (Htee Pwint Kan)",
+        desc: "Group of natural lakes.\nPeaceful and scenic environment.",
+        img: "./photo/Kayah/Seven Lakes.jpg",
+      },
+      {
+        title: "Kyat Cave",
+        desc: "Limestone cave with Buddha images.\nCool and quiet place to visit.",
+        img: "./photo/Kayah/Kyat Cave.jpg",
+      },
+      {
+        title: "Pan Pet Village",
+        desc: "Village of Kayan people.\nKnown for long-neck women tradition.",
+        img: "./photo/Kayah/Pan Pet Village.jpg",
+      },
+      {
+        title: "Lawpita Waterfall",
+        desc: "Beautiful waterfall near Loikaw.\nPopular for nature lovers.",
+        img: "./photo/Kayah/Lawpita Waterfall.jpg",
+      },
     ],
   },
+
   Food: {
     title: "Local Taste",
     items: [
-      { title: "Rice Dishes", desc: "Kayah-style meals." },
-      { title: "Leafy Salads", desc: "Fresh herb plates." },
-      { title: "Smoked Foods", desc: "Traditional preservation." },
+      {
+        title: "Kayah Sausage",
+        desc: "Traditional smoked meat sausage.\nRich flavor with local spices.",
+        img: "./photo/Kayah/Kayah Sausage.jpg",
+      },
+      {
+        title: "Bamboo Shoot Curry",
+        desc: "Curry made with bamboo shoots.\nCommon in Kayah cuisine.",
+        img: "./photo/Kayah/Bamboo Shoot Curry.jpg",
+      },
+      {
+        title: "Sticky Rice",
+        desc: "Soft and chewy rice dish.\nEaten with meat or vegetables.",
+        img: "./photo/Kayah/Sticky Rice.jpg",
+      },
+      {
+        title: "Grilled Fish & Meat",
+        desc: "Fresh meat grilled over fire.\nSimple and smoky taste.",
+        img: "./photo/Kayah/Grilled Fish & Meat.jpg",
+      },
+      {
+        title: "Herbal Soup",
+        desc: "Soup made with local herbs.\nHealthy and light meal.",
+        img: "./photo/Kayah/Herbal Soup.jpg",
+      },
     ],
   },
-  Culture: {
-    title: "Culture",
-    items: [
-      { title: "Kayah Heritage", desc: "Ethnic traditions." },
-      { title: "Handicrafts", desc: "Weaving and carving." },
-      { title: "Local Markets", desc: "Daily trade and food." },
-    ],
-  },
+
   Clothes: {
     title: "Traditional Wear",
     items: [
-      { title: "Kayah Weaving", desc: "Red and black textiles." },
-      { title: "Patterned Shawls", desc: "Distinct ethnic designs." },
-      { title: "Beaded Accessories", desc: "Handmade ornaments." },
+      {
+        title: "Kayah Traditional Dress",
+        desc: "Colorful red and black outfit.\nRepresents Kayah identity.",
+        img: "./photo/Kayah/Kayah Traditional Dress.jpg",
+      },
+      {
+        title: "Kayan people (Long-neck Women Style)",
+        desc: "Traditional brass neck rings.\nUnique cultural appearance.",
+        img: "./photo/Kayah/Kayan people.jpg",
+      },
+      {
+        title: "Handwoven Longyi (Htamein & Paso)",
+        desc: "Locally woven traditional clothing.\nUsed in daily life and festivals.",
+        img: "./photo/Kayah/Handwoven Longyi.jpg",
+      },
+      {
+        title: "Beaded Accessories",
+        desc: "Colorful handmade jewelry.\nWorn during special occasions.",
+        img: "./photo/Kayah/Beaded Accessories.jpg",
+      },
+      {
+        title: "Headscarves & Shawls",
+        desc: "Traditional woven cloth pieces.\nUsed for style and warmth.",
+        img: "./photo/Kayah/headscarves traditional.jpg",
+      },
     ],
   },
+
   Event: {
     title: "Events",
     items: [
-      { title: "Kayah Festival", desc: "Cultural shows and dance." },
-      { title: "Pagoda Fairs", desc: "Seasonal events." },
-      { title: "Harvest Celebrations", desc: "Village gatherings." },
+      {
+        title: "Kayah State Day Festival",
+        desc: "Celebration of Kayah state.\nIncludes dances and performances.",
+        img: "./photo/Kayah/Kayah State Day Festival.jpg",
+      },
+      {
+        title: "Traditional Kayah Wrist-Tying Ceremony",
+        desc: "Cultural ceremony for blessings.\nFamilies tie strings on wrists.",
+        img: "./photo/Kayah/Traditional Kayah Wrist-Tying Ceremony.jpg",
+      },
+      {
+        title: "Thingyan Water Festival",
+        desc: "Myanmar New Year festival.\nCelebrated with water activities.",
+        img: "./photo/yangon/Thingyan Water Festival.jpg",
+      },
+      {
+        title: "Tazaungdaing Festival",
+        desc: "Festival with lights and offerings.\nIncludes traditional rituals.",
+        img: "./photo/yangon/Tazaungdaing Festival.jpg",
+      },
+      {
+        title: "Thadingyut Festival",
+        desc: "Festival of lights after Lent.\nHomes glow with decorations.",
+        img: "./photo/yangon/Thadingyut Festival.jpg",
+      },
     ],
   },
 };
@@ -1064,41 +1154,121 @@ cityCategoryData["HPA-AN"] = {
   Tourism: {
     title: "Top Spots",
     items: [
-      { title: "Saddan Cave", desc: "Boat-through limestone cave." },
-      { title: "Mount Zwegabin", desc: "Iconic mountain trek." },
-      { title: "Kyauk Kalap", desc: "Stunning lake pagoda." },
+      {
+        title: "Mount Zwegabin",
+        desc: "Famous limestone mountain near Hpa-An.\nPopular for hiking and sunrise views.",
+        img: "./photo/kayin/Mount Zwegabin.jpg",
+      },
+      {
+        title: "Saddan Cave",
+        desc: "Large cave with Buddha statues.\nEnds with a beautiful lake exit.",
+        img: "./photo/kayin/Saddan Cave.jpg",
+      },
+      {
+        title: "Kyauk Kalap Pagoda",
+        desc: "Pagoda on a rock in the lake.\nIconic landmark of Kayin State.",
+        img: "./photo/kayin/Kyauk Kalap Pagoda.jpg",
+      },
+      {
+        title: "Kawgun Cave",
+        desc: "Cave filled with ancient carvings.\nContains many Buddha images.",
+        img: "./photo/kayin/Kawgun Cave.jpg",
+      },
+      {
+        title: "Lumbini Garden",
+        desc: "Garden with many Buddha statues.\nPeaceful place near Mount Zwegabin.",
+        img: "./photo/kayin/Lumbini Garden.jpg",
+      },
     ],
   },
   Food: {
     title: "Local Taste",
     items: [
-      { title: "Karen Cuisine", desc: "Herbs and fresh greens." },
-      { title: "River Fish", desc: "Local lakeside dishes." },
-      { title: "Tea Leaf Salad", desc: "Classic Burmese favorite." },
-    ],
-  },
-  Culture: {
-    title: "Culture",
-    items: [
-      { title: "Karen Traditions", desc: "Music and dance culture." },
-      { title: "Cave Temples", desc: "Religious heritage." },
-      { title: "Village Life", desc: "Rural community spirit." },
+      {
+        title: "Kayin Talapaw Soup",
+        desc: "Traditional Karen herbal soup.\nMade with vegetables and meat.",
+        img: "./photo/kayin/Kayin Talapaw Soup.jpg",
+      },
+      {
+        title: "Bamboo Shoot Curry",
+        desc: "Curry with bamboo shoots.\nCommon in ethnic cuisine.",
+        img: "./photo/Kayah/Bamboo Shoot Curry.jpg",
+      },
+      {
+        title: "Sticky Rice",
+        desc: "Soft and chewy rice dish.\nEaten with side dishes.",
+        img: "./photo/Kayah/Sticky Rice.jpg",
+      },
+      {
+        title: "Grilled Fish & Meat",
+        desc: "Fresh meat grilled on fire.\nSimple and smoky flavor.",
+        img: "./photo/Kayah/Grilled Fish & Meat.jpg",
+      },
+      {
+        title: "Herbal Vegetable Dishes",
+        desc: "Vegetables cooked with herbs.\nHealthy and traditional meals.",
+        img: "./photo/kayin/Herbal Vegetable Dishes.jpg",
+      },
     ],
   },
   Clothes: {
     title: "Traditional Wear",
     items: [
-      { title: "Karen Weaves", desc: "Red and white patterns." },
-      { title: "Handmade Bags", desc: "Local woven accessories." },
-      { title: "Cotton Longyi", desc: "Simple daily wear." },
+      {
+        title: "Karen Traditional Shirt (White Tunic)",
+        desc: "White tunic worn by Karen men.\nSimple and culturally symbolic.",
+        img: "./photo/kayin/Karen Traditional Shirt (White Tunic).jpg",
+      },
+      {
+        title: "Karen people Traditional Dress",
+        desc: "Colorful woven clothing.\nRepresents Karen ethnic identity.",
+        img: "./photo/kayin/kayin.jpg",
+      },
+      {
+        title: "Handwoven Longyi (Htamein & Paso)",
+        desc: "Traditional woven lower garment.\nUsed in daily life and events.",
+        img: "./photo/Kayah/Handwoven Longyi.jpg",
+      },
+      {
+        title: "Accesssories in Kayin",
+        desc: "Traditional handmade accessories.\nWorn during festivals and ceremonies.",
+        img: "./photo/kayin/Accessories.jpg",
+      },
+      {
+        title: "Handwoven Cloth",
+        desc: "Locally made woven fabrics.\nUsed for clothing and decoration.",
+        img: "./photo/kayin/Handwoven Cloth.jpg",
+      },
     ],
   },
   Event: {
     title: "Events",
     items: [
-      { title: "Karen New Year", desc: "Major cultural festival." },
-      { title: "Pagoda Fairs", desc: "Seasonal temple events." },
-      { title: "Boat Races", desc: "River celebrations." },
+      {
+        title: "Karen New Year",
+        desc: "Important Karen cultural festival.\nIncludes dances and celebrations.",
+        img: "./photo/kayin/Karen New Year Festival.jpg",
+      },
+      {
+        title: "Don Dance Festival",
+        desc: "Traditional Karen dance event.\nPerformed during celebrations.",
+        img: "./photo/kayin/Don Dance Festival.jpg",
+      },
+      {
+        title: "Thadingyut Festival",
+        desc: "Festival of lights after Lent.\nDecorated with candles and lights.",
+        img: "./photo/yangon/Thadingyut Festival.jpg",
+      },
+      {
+        title: "Tazaungdaing Festival",
+        desc: "Festival with lights and offerings.\nIncludes robe donation ceremonies.",
+        img: "./photo/yangon/Tazaungdaing Festival.jpg",
+      },
+      {
+        title: "Wrist-Tying Ceremony",
+        desc: "Traditional blessing ceremony.\nPeople tie strings for good luck.",
+        img: "./photo/kayin/Wrist-Tying Ceremony.jpg",
+      },
     ],
   },
 };
@@ -1107,41 +1277,121 @@ cityCategoryData.HAKHA = {
   Tourism: {
     title: "Top Spots",
     items: [
-      { title: "Hakha Viewpoints", desc: "Mountain panoramas." },
-      { title: "Local Villages", desc: "Traditional Chin life." },
-      { title: "Hillside Paths", desc: "Scenic walking routes." },
+      {
+        title: "Mount Victoria",
+        desc: "Highest mountain in Chin State.\nPopular for trekking and nature.",
+        img: "./photo/chin/mount-victoria.jpg",
+      },
+      {
+        title: "Rih Lake",
+        desc: "Heart-shaped natural lake.\nImportant cultural and scenic site.",
+        img: "./photo/chin/Rih Lake.jpg",
+      },
+      {
+        title: "Nat Ma Taung National Park",
+        desc: "Protected mountain park.\nHome to rare plants and animals.",
+        img: "./photo/chin/Nat Ma Taung National Park.jpg",
+      },
+      {
+        title: "Kanpetlet",
+        desc: "Small town near Mount Victoria.\nGateway for trekking trips.",
+        img: "./photo/chin/Kanpetlet.jpg",
+      },
+      {
+        title: "Chin Villages",
+        desc: "Traditional mountain villages.\nKnown for unique local culture.",
+        img: "./photo/chin/Chin Villages.jpg",
+      },
     ],
   },
   Food: {
     title: "Local Taste",
     items: [
-      { title: "Chin Dishes", desc: "Smoked meats and herbs." },
-      { title: "Mountain Rice", desc: "Hearty local staple." },
-      { title: "Tea & Snacks", desc: "Warm, simple bites." },
-    ],
-  },
-  Culture: {
-    title: "Culture",
-    items: [
-      { title: "Chin Traditions", desc: "Distinct ethnic customs." },
-      { title: "Weaving", desc: "Textiles and patterns." },
-      { title: "Community Life", desc: "Close village ties." },
+      {
+        title: "Smoked Meat 🥩",
+        desc: "Meat preserved by smoking.\nCommon in Chin traditional meals.",
+        img: "./photo/chin/Smoked Meat 🥩.jpg",
+      },
+      {
+        title: "Fermented Food (Pickles)",
+        desc: "Fermented vegetables and foods.\nSour taste and long preservation.",
+        img: "./photo/chin/Fermented Food (Pickles).jpg",
+      },
+      {
+        title: "Bamboo Shoot Dishes",
+        desc: "Dishes made with bamboo shoots.\nSeasonal and local ingredient.",
+        img: "./photo/chin/Bamboo Shoot Dishes.jpg",
+      },
+      {
+        title: "Chin Rice (Sticky Rice)",
+        desc: "Sticky rice common in Chin State.\nEaten with meat and vegetables.",
+        img: "./photo/chin/Chin Rice (Sticky Rice).jpg",
+      },
+      {
+        title: "Vegetable Soup",
+        desc: "Simple soup with local greens.\nHealthy and light meal.",
+        img: "./photo/chin/Vegetable Soup.jpg",
+      },
     ],
   },
   Clothes: {
     title: "Traditional Wear",
     items: [
-      { title: "Chin Shawls", desc: "Bold, geometric designs." },
-      { title: "Warm Jackets", desc: "Cool climate layers." },
-      { title: "Handmade Beads", desc: "Traditional accessories." },
+      {
+        title: "Chin people Traditional Dress",
+        desc: "Colorful woven ethnic clothing.\nFeatures bold geometric patterns.",
+        img: "./photo/chin/Chin people Traditional Dress.jpg",
+      },
+      {
+        title: "Handwoven Cloth",
+        desc: "Traditional handmade fabrics.\nUsed for clothing and shawls.",
+        img: "./photo/chin/Handwoven Cloth.jpg",
+      },
+      {
+        title: "Woolen Clothing",
+        desc: "Warm clothes for mountain climate.\nMade from wool materials.",
+        img: "./photo/chin/Woolen Clothing.jpg",
+      },
+      {
+        title: "Traditional Shawls",
+        desc: "Woven shawls with patterns.\nUsed in ceremonies and daily wear.",
+        img: "./photo/chin/Traditional Shawls.jpg",
+      },
+      {
+        title: "Beads & Accessories",
+        desc: "Handmade bead jewelry.\nWorn during cultural events.",
+        img: "./photo/chin/Beads & Accessories.jpg",
+      },
     ],
   },
   Event: {
     title: "Events",
     items: [
-      { title: "Chin National Day", desc: "Major cultural festival." },
-      { title: "Harvest Fest", desc: "Seasonal gatherings." },
-      { title: "Village Ceremonies", desc: "Community rituals." },
+      {
+        title: "Chin National Day",
+        desc: "Major cultural celebration.\nIncludes dances and performances.",
+        img: "./photo/chin/Chin National Day.jpg",
+      },
+      {
+        title: "Harvest Fest",
+        desc: "Festival after harvest season.\nCelebrates food and community.",
+        img: "./photo/chin/Harvest Festival.jpg",
+      },
+      {
+        title: "Thingyan Water Festival",
+        desc: "Myanmar New Year festival.\nCelebrated with water activities.",
+        img: "./photo/yangon/Thingyan Water Festival.jpg",
+      },
+      {
+        title: "Thadingyut Festival",
+        desc: "Festival of lights after Lent.\nDecorated with candles and lights.",
+        img: "./photo/yangon/Thadingyut Festival.jpg",
+      },
+      {
+        title: "Traditional Chin Festivals",
+        desc: "Various cultural events.\nShow local traditions and customs.",
+        img: "./photo/chin/Traditional Chin Festival.jpg",
+      },
     ],
   },
 };
@@ -1150,41 +1400,124 @@ cityCategoryData.MAWLAMYINE = {
   Tourism: {
     title: "Top Spots",
     items: [
-      { title: "Kyaikthanlan", desc: "Hilltop pagoda views." },
-      { title: "Strand Road", desc: "Colonial riverside walk." },
-      { title: "Thanlwin Bridge", desc: "Scenic river crossing." },
+      {
+        title: "Kyaiktiyo Pagoda",
+        desc: "A famous hilltop pagoda known for its golden rock. Pilgrims visit from all over Mon State.",
+        img: "./photo/Mon/Kyaiktiyo Pagoda.jpg",
+      },
+      {
+        title: "Setse Beach",
+        desc: "A popular coastal spot for day trips and relaxation. Visitors enjoy swimming and sunsets.",
+        img: "./photo/Mon/Setse Beach.jpg",
+      },
+      {
+        title: "Thanbyuzayat War Cemetery",
+        desc: "Historic World War II cemetery. It commemorates soldiers who built the Death Railway.",
+        img: "./photo/Mon/Thanbyuzayat War Cemetery.jpg",
+      },
+      {
+        title: "Win Sein Taw Ya",
+        desc: "Home to one of the largest reclining Buddha statues. The site features intricate religious art.",
+        img: "./photo/Mon/Win Sein Taw Ya.jpg",
+      },
+      {
+        title: "Kyaikthanlan Pagoda",
+        desc: "Offers panoramic city and river views at sunset. A peaceful spot for reflection and photos.",
+        img: "./photo/Mon/Kyaikthanlan Pagoda.jpg",
+      },
     ],
   },
+
   Food: {
     title: "Local Taste",
     items: [
-      { title: "Mon Cuisine", desc: "Distinct Mon flavors." },
-      { title: "Seafood Dishes", desc: "Fresh coastal plates." },
-      { title: "Street Snacks", desc: "Fritters and noodles." },
+      {
+        title: "Mon Mohinga",
+        desc: "Traditional Mon breakfast noodle soup. Flavored with local fish and spices.",
+        img: "./photo/yangon/Mohinga.jpg",
+      },
+      {
+        title: "Mon Curry",
+        desc: "A spicy coastal curry made with fresh ingredients. Popular among locals and visitors.",
+        img: "./photo/Mon/Mon Curry.jpg",
+      },
+      {
+        title: "Rice Salad (Htamin Thoke)",
+        desc: "Mix of rice, nuts, and herbs. A flavorful traditional Mon dish.",
+        img: "./photo/Mon/Rice Salad (Htamin Thoke).jpg",
+      },
+      {
+        title: "Nga Htamin (Fish Rice)",
+        desc: "Steamed rice served with fresh fish. A staple dish in Mon cuisine.",
+        img: "./photo/Mon/Nga Htamin (Fish Rice).jpg",
+      },
+      {
+        title: "Mon Traditional Snacks (Mont)",
+        desc: "Variety of sweet and savory street snacks. Often eaten during festivals.",
+        img: "./photo/Mon/Mon Traditional Snacks (Mont).jpg",
+      },
     ],
   },
-  Culture: {
-    title: "Culture",
-    items: [
-      { title: "Mon Heritage", desc: "Ancient cultural roots." },
-      { title: "Riverside Life", desc: "Harbor and trade." },
-      { title: "Colonial History", desc: "Old town architecture." },
-    ],
-  },
+
   Clothes: {
     title: "Traditional Wear",
     items: [
-      { title: "Mon Longyi", desc: "Distinct Mon patterns." },
-      { title: "Light Cotton", desc: "Comfortable coastal wear." },
-      { title: "Festival Attire", desc: "Colorful cultural outfits." },
+      {
+        title: "Mon people Traditional Dress",
+        desc: "Colorful traditional attire worn during festivals. Patterns vary by region and community.",
+        img: "./photo/Mon/Mon people Traditional Dress.jpg",
+      },
+      {
+        title: "Mon Longyi (Htamein & Paso)",
+        desc: "Handwoven ceremonial longyi worn by men and women. Often used in traditional events.",
+        img: "./photo/Mon/Mon Longyi (Htamein & Paso).jpg",
+      },
+      {
+        title: "Shawl (Yin Htwe)",
+        desc: "Light, woven wraps for daily and ceremonial use. Adds elegance to traditional outfits.",
+        img: "./photo/Mon/Shawl (Yin Htwe).jpg",
+      },
+      {
+        title: "Traditional Blouse",
+        desc: "Brightly colored blouses worn by Mon women. Matches the local ceremonial longyi.",
+        img: "./photo/Mon/Traditional Blouse.jpg",
+      },
+      {
+        title: "Handwoven Fabric",
+        desc: "Locally crafted fabrics with intricate designs. Used for clothing and decorative purposes.",
+        img: "./photo/Mon/Handwoven Fabric.jpg",
+      },
     ],
   },
+
   Event: {
     title: "Events",
     items: [
-      { title: "Pagoda Fairs", desc: "Seasonal celebrations." },
-      { title: "Mon New Year", desc: "Cultural festivities." },
-      { title: "Water Festival", desc: "Thingyan events." },
+      {
+        title: "Kyaiktiyo Pagoda Festival",
+        desc: "Annual festival celebrating the sacred pagoda. Pilgrims and tourists gather for rituals.",
+        img: "./photo/Mon/Kyaiktiyo Pagoda Festival.jpg",
+      },
+      {
+        title: "Mon National Day",
+        desc: "Celebrates Mon culture and heritage. Features parades, fairs, and local performances.",
+        img: "./photo/Mon/Mon National Day.jpg",
+      },
+      {
+        title: "Thadingyut Festival",
+        desc: "Festival of lights marking the end of Buddhist Lent. Colorful decorations and ceremonies.",
+        img: "./photo/yangon/Thadingyut Festival.jpg",
+      },
+      {
+        title: "Tazaungdaing Festival",
+        desc: "Celebrated with lights and offerings at temples. Community gatherings and traditional events.",
+        img: "./photo/yangon/Tazaungdaing Festival.jpg",
+      },
+      {
+        title: "Thingyan Water Festival",
+        desc: "Burmese New Year water festival. People splash water to symbolize cleansing and renewal.",
+        img: "./photo/yangon/Thingyan Water Festival.jpg",
+      },
     ],
   },
 };
@@ -1193,41 +1526,124 @@ cityCategoryData.SITTWE = {
   Tourism: {
     title: "Top Spots",
     items: [
-      { title: "Sittwe Seafront", desc: "Ocean breeze and sunsets." },
-      { title: "Local Jetty", desc: "Boats and harbor views." },
-      { title: "Rakhine Museum", desc: "Regional history." },
+      {
+        title: "Ngapali Beach",
+        desc: "Famous beach known for white sand and sunsets. Popular for swimming and relaxation.",
+        img: "./photo/rakhine/Ngapali Beach.jpg",
+      },
+      {
+        title: "Mrauk U",
+        desc: "Ancient city with historic temples and ruins. Offers unique cultural experiences.",
+        img: "./photo/rakhine/Mrauk U.jpg",
+      },
+      {
+        title: "Shittaung Pagoda",
+        desc: "Historic pagoda with numerous Buddha images. A center of religious devotion.",
+        img: "./photo/rakhine/Shittaung Pagoda.jpg",
+      },
+      {
+        title: "Koe Thaung Temple",
+        desc: "Largest temple in Mrauk U region. Known for detailed sculptures and carvings.",
+        img: "./photo/rakhine/Koe Thaung Temple.jpg",
+      },
+      {
+        title: "Mahāmuni Buddha Temple",
+        desc: "Famous for its giant Buddha statue. Pilgrims visit to pay respect and meditate.",
+        img: "./photo/rakhine/Mahāmuni Buddha Temple.jpg",
+      },
     ],
   },
+
   Food: {
     title: "Local Taste",
     items: [
-      { title: "Rakhine Mont Di", desc: "Signature noodle dish." },
-      { title: "Seafood Curries", desc: "Coastal flavors." },
-      { title: "Fish Paste Dips", desc: "Local spicy sides." },
+      {
+        title: "Rakhine Mont Di",
+        desc: "Signature Rakhine noodle dish with spicy flavors. Served with fresh local ingredients.",
+        img: "./photo/rakhine/Rakhine Mont Di.jpg",
+      },
+      {
+        title: "Seafood (Fish, Prawn, Crab)",
+        desc: "Fresh seafood from the coast. Grilled or cooked with traditional spices.",
+        img: "./photo/thnintharyi/Seafood (Fish, Prawn, Crab).jpg",
+      },
+      {
+        title: "Ngapi Yay (Fish Paste Soup)",
+        desc: "Local soup made from fermented fish paste. Adds rich and tangy flavors to meals.",
+        img: "./photo/rakhine/Ngapi Yay (Fish Paste Soup).jpg",
+      },
+      {
+        title: "Spicy Fish Curry",
+        desc: "Curry made with freshly caught fish. Traditional coastal spices enhance the taste.",
+        img: "./photo/rakhine/Spicy Fish Curry.jpg",
+      },
+      {
+        title: "Seaweed Salad",
+        desc: "Salad made with fresh seaweed from local markets. Light and healthy option.",
+        img: "./photo/rakhine/Seaweed Salad.jpg",
+      },
     ],
   },
-  Culture: {
-    title: "Culture",
-    items: [
-      { title: "Rakhine Traditions", desc: "Distinct coastal culture." },
-      { title: "Seaside Markets", desc: "Busy harbor trade." },
-      { title: "Temple Visits", desc: "Active religious life." },
-    ],
-  },
+
   Clothes: {
     title: "Traditional Wear",
     items: [
-      { title: "Rakhine Longyi", desc: "Regional patterns and colors." },
-      { title: "Light Shawls", desc: "Sea breeze layers." },
-      { title: "Festival Wear", desc: "Bright community outfits." },
+      {
+        title: "Rakhine people Traditional Dress",
+        desc: "Colorful clothing reflecting local traditions. Worn during festivals and ceremonies.",
+        img: "./photo/rakhine/Rakhine people Traditional Dress.jpg",
+      },
+      {
+        title: "Rakhine Longyi (Htamein & Paso)",
+        desc: "Traditional skirt and wrap for men and women. Suitable for daily and ceremonial wear.",
+        img: "./photo/rakhine/Rakhine Longyi (Htamein & Paso).jpg",
+      },
+      {
+        title: "Traditional Blouse & Shirt",
+        desc: "Bright blouses and shirts paired with local longyi. Worn during celebrations.",
+        img: "./photo/rakhine/Traditional Blouse & Shirt.jpg",
+      },
+      {
+        title: "Headscarves",
+        desc: "Woven scarves with regional patterns. Often worn for protection and style.",
+        img: "./photo/rakhine/Headscarves.jpg",
+      },
+      {
+        title: "Handwoven Fabric",
+        desc: "Locally crafted fabric for ceremonial attire. Shows traditional Rakhine motifs.",
+        img: "./photo/rakhine/Handwoven Fabric.jpg",
+      },
     ],
   },
+
   Event: {
     title: "Events",
     items: [
-      { title: "Pagoda Festivals", desc: "Seasonal temple fairs." },
-      { title: "Boat Races", desc: "Coastal competitions." },
-      { title: "Water Festival", desc: "Thingyan celebrations." },
+      {
+        title: "Shittaung Pagoda Festival",
+        desc: "Temple festival with religious rituals and offerings. Attracts devotees from nearby towns.",
+        img: "./photo/rakhine/Shittaung Pagoda Festival.jpg",
+      },
+      {
+        title: "Rakhine State Day",
+        desc: "Celebration of Rakhine heritage. Features cultural competitions and performances.",
+        img: "./photo/rakhine/Rakhine State Day.jpg",
+      },
+      {
+        title: "Thadingyut Festival",
+        desc: "Festival of lights marking the end of Buddhist Lent. Decorated streets and temples.",
+        img: "./photo/yangon/Thadingyut Festival.jpg",
+      },
+      {
+        title: "Tazaungdaing Festival",
+        desc: "Annual festival with lanterns and offerings. Communities gather for celebrations.",
+        img: "./photo/yangon/Tazaungdaing Festival.jpg",
+      },
+      {
+        title: "Man Aung Festival",
+        desc: "Local festival showcasing Rakhine culture. Music, dance, and traditional events abound.",
+        img: "./photo/rakhine/Man Aung Festival.jpg",
+      },
     ],
   },
 };
@@ -1237,29 +1653,29 @@ cityCategoryData.TAUNGGYI = {
     title: "Top Spots",
     items: [
       {
-        title: "Hot Springs",
-        desc: "Relaxing natural springs.",
+        title: "Inle Lake",
+        desc: "Scenic freshwater lake with floating gardens. Famous for local boat markets and villages.",
         img: "./photo/shan state/tanggyi/food/Torisum/inlay.jpg",
       },
       {
-        title: "Local Market",
-        desc: "Border trade goods.",
+        title: "Kalaw",
+        desc: "Hill town known for trekking and border trade goods. Offers stunning mountain landscapes.",
         img: "./photo/shan state/tanggyi/food/Torisum/Kalaw.jpg",
       },
       {
-        title: "Hill Views",
-        desc: "Scenic Shan landscapes.",
+        title: "Pindaya",
+        desc: "Town surrounded by limestone caves and scenic Shan landscapes. Famous for crafts and temples.",
         img: "./photo/shan state/tanggyi/food/Torisum/pindaya.jpg",
       },
       {
-        title: "Temple",
-        desc: "Local pagoda view.",
-        img: "./photo/lashio/tour4.jpg",
+        title: "Kakku",
+        desc: "Site with thousands of ancient pagodas. Offers unique views of local religious architecture.",
+        img: "./photo/shan state/tanggyi/food/Torisum/kakku.jpg",
       },
       {
-        title: "Sunset Point",
-        desc: "Evening view.",
-        img: "./photo/lashio/tour5.jpg",
+        title: "Hsipaw",
+        desc: "Picturesque town with riverside views. Known for local culture and trekking experiences.",
+        img: "./photo/shan state/Hsipaw.jpg",
       },
     ],
   },
@@ -1269,90 +1685,59 @@ cityCategoryData.TAUNGGYI = {
     items: [
       {
         title: "Shan Noodles",
-        desc: "Light, savory bowls.",
+        desc: "Light, savory noodle soup. Often served with herbs, meat, and chili sauce.",
         img: "./photo/shan state/tanggyi/food/shannoodles.jpg",
       },
       {
-        title: "Pickled Tea",
-        desc: "Classic Shan snack.",
+        title: "Fish Rice",
+        desc: "Rice served with local fish dishes. A traditional Shan snack or meal.",
         img: "./photo/shan state/tanggyi/food/fishrice.jpg",
       },
       {
-        title: "Grilled Meats",
-        desc: "Street BBQ stalls.",
+        title: "Hin Tope",
+        desc: "Grilled skewers and street BBQ stalls. Popular for local festivals and gatherings.",
         img: "./photo/shan state/tanggyi/food/hintope.jpg",
       },
       {
-        title: "Rice Dish",
-        desc: "Local rice plate.",
+        title: "Grilled Fish",
+        desc: "Freshly caught fish grilled with spices. Served with rice or salad.",
         img: "./photo/shan state/tanggyi/food/Tasty Oven Grilled Fish Recipe.jpg",
       },
       {
-        title: "Soup",
-        desc: "Traditional soup.",
+        title: "To Fu Nawe",
+        desc: "Traditional Shan tofu soup. Savory and often served with herbs and chili.",
         img: "./photo/shan state/tanggyi/food/tofunawe.jpg",
       },
     ],
   },
 
-  Culture: {
-    title: "Culture",
-    items: [
-      {
-        title: "Ethnic Mix",
-        desc: "Shan, Palaung, and more.",
-        img: "./photo/lashio/culture1.jpg",
-      },
-      {
-        title: "Trade Town",
-        desc: "Busy market life.",
-        img: "./photo/lashio/culture2.jpg",
-      },
-      {
-        title: "Monastic Schools",
-        desc: "Traditional learning.",
-        img: "./photo/lashio/culture3.jpg",
-      },
-      {
-        title: "Village Life",
-        desc: "Local traditions.",
-        img: "./photo/lashio/culture4.jpg",
-      },
-      {
-        title: "Festivals",
-        desc: "Cultural events.",
-        img: "./photo/lashio/culture5.jpg",
-      },
-    ],
-  },
-
   Clothes: {
     title: "Traditional Wear",
     items: [
       {
-        title: "Shan Textiles",
-        desc: "Striped longyi designs.",
-        img: "./photo/lashio/clothes1.jpg",
+        title: "Shan Traditional Dress",
+        desc: "Striped longyi designs worn during festivals. Represents Shan culture and identity.",
+        img: "./photo/shan state/Shan Traditional Dress.jpg",
       },
       {
-        title: "Warm Layers",
-        desc: "Cool climate wear.",
-        img: "./photo/lashio/clothes2.jpg",
+        title: "Shan Longyi",
+        desc: "Worn by men and women in daily life or ceremonies. Made from handwoven fabrics.",
+        img: "./photo/shan state/Shan Longyi.jpg",
       },
       {
-        title: "Handwoven Bags",
-        desc: "Local accessories.",
-        img: "./photo/lashio/clothes3.jpg",
+        title: "Shan Jacket",
+        desc: "Traditional jacket for formal and festival occasions. Often paired with longyi.",
+        img: "./photo/shan state/Shan Jacket.jpg",
       },
       {
-        title: "Scarves",
-        desc: "Traditional style.",
-        img: "./photo/lashio/clothes4.jpg",
+        title: "Shan Dance Dress",
+        desc: "Used in cultural dance performances. Colorful attire highlighting traditional motifs.",
+        img: "./photo/shan state/shan dance dress.jpg",
       },
       {
-        title: "Accessories",
-        desc: "Local handmade.",
-        img: "./photo/lashio/clothes5.jpg",
+        title: "Handwoven Shan Textiles",
+        desc: "Locally crafted fabrics. Used for clothing, decoration, and ceremonial purposes.",
+        img: "./photo/shan state/Handwoven Shan Textiles.jpg",
       },
     ],
   },
@@ -1361,343 +1746,29 @@ cityCategoryData.TAUNGGYI = {
     title: "Events",
     items: [
       {
-        title: "Shan New Year",
-        desc: "Cultural festivities.",
-        img: "./photo/lashio/event1.jpg",
+        title: "Phaung Daw Oo Pagoda Festival",
+        desc: "Annual festival held at Inle Lake. Involves boat processions and religious rituals.",
+        img: "./photo/shan state/Phaung Daw Oo Pagoda Festival.jpg",
       },
       {
-        title: "Market Fairs",
-        desc: "Seasonal trade events.",
-        img: "./photo/lashio/event2.jpg",
+        title: "Taunggyi Balloon Festival",
+        desc: "Famous hot air balloon festival. Attracts visitors for cultural celebrations and competitions.",
+        img: "./photo/shan state/Taunggyi Balloon Festival.jpg",
       },
       {
-        title: "Pagoda Days",
-        desc: "Temple celebrations.",
-        img: "./photo/lashio/event3.jpg",
+        title: "Shan New Year Festival",
+        desc: "Celebrates the traditional Shan calendar. Includes dances, food, and cultural events.",
+        img: "./photo/shan state/Shan New Year Festival.jpg",
       },
       {
-        title: "Local Festival",
-        desc: "Community events.",
-        img: "./photo/lashio/event4.jpg",
+        title: "Thingyan in Shan State",
+        desc: "Water festival marking the Burmese New Year. Community celebrations with fun and rituals.",
+        img: "./photo/shan state/Thingyan in Shan State.jpg",
       },
       {
-        title: "Music Show",
-        desc: "Cultural performance.",
-        img: "./photo/lashio/event5.jpg",
-      },
-    ],
-  },
-};
-
-cityCategoryData.LASHIO = {
-  Tourism: {
-    title: "Top Spots",
-    items: [
-      {
-        title: "Hot Springs",
-        desc: "Relaxing natural springs.",
-        img: "./photo/lashio/tour1.jpg",
-      },
-      {
-        title: "Local Market",
-        desc: "Border trade goods.",
-        img: "./photo/lashio/tour2.jpg",
-      },
-      {
-        title: "Hill Views",
-        desc: "Scenic Shan landscapes.",
-        img: "./photo/lashio/tour3.jpg",
-      },
-      {
-        title: "Temple",
-        desc: "Local pagoda view.",
-        img: "./photo/lashio/tour4.jpg",
-      },
-      {
-        title: "Sunset Point",
-        desc: "Evening view.",
-        img: "./photo/lashio/tour5.jpg",
-      },
-    ],
-  },
-
-  Food: {
-    title: "Local Taste",
-    items: [
-      {
-        title: "Shan Noodles",
-        desc: "Light, savory bowls.",
-        img: "./photo/shan state/tanggyi/food/hintope.jpg",
-      },
-      {
-        title: "Pickled Tea",
-        desc: "Classic Shan snack.",
-        img: "./photo/lashio/food2.jpg",
-      },
-      {
-        title: "Grilled Meats",
-        desc: "Street BBQ stalls.",
-        img: "./photo/lashio/food3.jpg",
-      },
-      {
-        title: "Rice Dish",
-        desc: "Local rice plate.",
-        img: "./photo/lashio/food4.jpg",
-      },
-      {
-        title: "Soup",
-        desc: "Traditional soup.",
-        img: "./photo/lashio/food5.jpg",
-      },
-    ],
-  },
-
-  Culture: {
-    title: "Culture",
-    items: [
-      {
-        title: "Ethnic Mix",
-        desc: "Shan, Palaung, and more.",
-        img: "./photo/lashio/culture1.jpg",
-      },
-      {
-        title: "Trade Town",
-        desc: "Busy market life.",
-        img: "./photo/lashio/culture2.jpg",
-      },
-      {
-        title: "Monastic Schools",
-        desc: "Traditional learning.",
-        img: "./photo/lashio/culture3.jpg",
-      },
-      {
-        title: "Village Life",
-        desc: "Local traditions.",
-        img: "./photo/lashio/culture4.jpg",
-      },
-      {
-        title: "Festivals",
-        desc: "Cultural events.",
-        img: "./photo/lashio/culture5.jpg",
-      },
-    ],
-  },
-
-  Clothes: {
-    title: "Traditional Wear",
-    items: [
-      {
-        title: "Shan Textiles",
-        desc: "Striped longyi designs.",
-        img: "./photo/lashio/clothes1.jpg",
-      },
-      {
-        title: "Warm Layers",
-        desc: "Cool climate wear.",
-        img: "./photo/lashio/clothes2.jpg",
-      },
-      {
-        title: "Handwoven Bags",
-        desc: "Local accessories.",
-        img: "./photo/lashio/clothes3.jpg",
-      },
-      {
-        title: "Scarves",
-        desc: "Traditional style.",
-        img: "./photo/lashio/clothes4.jpg",
-      },
-      {
-        title: "Accessories",
-        desc: "Local handmade.",
-        img: "./photo/lashio/clothes5.jpg",
-      },
-    ],
-  },
-
-  Event: {
-    title: "Events",
-    items: [
-      {
-        title: "Shan New Year",
-        desc: "Cultural festivities.",
-        img: "./photo/lashio/event1.jpg",
-      },
-      {
-        title: "Market Fairs",
-        desc: "Seasonal trade events.",
-        img: "./photo/lashio/event2.jpg",
-      },
-      {
-        title: "Pagoda Days",
-        desc: "Temple celebrations.",
-        img: "./photo/lashio/event3.jpg",
-      },
-      {
-        title: "Local Festival",
-        desc: "Community events.",
-        img: "./photo/lashio/event4.jpg",
-      },
-      {
-        title: "Music Show",
-        desc: "Cultural performance.",
-        img: "./photo/lashio/event5.jpg",
-      },
-    ],
-  },
-};
-
-cityCategoryData.KENGTUNG = {
-  Tourism: {
-    title: "Top Spots",
-    items: [
-      {
-        title: "Hot Springs",
-        desc: "Relaxing natural springs.",
-        img: "./photo/lashio/tour1.jpg",
-      },
-      {
-        title: "Local Market",
-        desc: "Border trade goods.",
-        img: "./photo/lashio/tour2.jpg",
-      },
-      {
-        title: "Hill Views",
-        desc: "Scenic Shan landscapes.",
-        img: "./photo/lashio/tour3.jpg",
-      },
-      {
-        title: "Temple",
-        desc: "Local pagoda view.",
-        img: "./photo/lashio/tour4.jpg",
-      },
-      {
-        title: "Sunset Point",
-        desc: "Evening view.",
-        img: "./photo/lashio/tour5.jpg",
-      },
-    ],
-  },
-
-  Food: {
-    title: "Local Taste",
-    items: [
-      {
-        title: "Shan Noodles",
-        desc: "Light, savory bowls.",
-        img: "./photo/shan state/tanggyi/food/hintope.jpg",
-      },
-      {
-        title: "Pickled Tea",
-        desc: "Classic Shan snack.",
-        img: "./photo/lashio/food2.jpg",
-      },
-      {
-        title: "Grilled Meats",
-        desc: "Street BBQ stalls.",
-        img: "./photo/lashio/food3.jpg",
-      },
-      {
-        title: "Rice Dish",
-        desc: "Local rice plate.",
-        img: "./photo/lashio/food4.jpg",
-      },
-      {
-        title: "Soup",
-        desc: "Traditional soup.",
-        img: "./photo/lashio/food5.jpg",
-      },
-    ],
-  },
-
-  Culture: {
-    title: "Culture",
-    items: [
-      {
-        title: "Ethnic Mix",
-        desc: "Shan, Palaung, and more.",
-        img: "./photo/lashio/culture1.jpg",
-      },
-      {
-        title: "Trade Town",
-        desc: "Busy market life.",
-        img: "./photo/lashio/culture2.jpg",
-      },
-      {
-        title: "Monastic Schools",
-        desc: "Traditional learning.",
-        img: "./photo/lashio/culture3.jpg",
-      },
-      {
-        title: "Village Life",
-        desc: "Local traditions.",
-        img: "./photo/lashio/culture4.jpg",
-      },
-      {
-        title: "Festivals",
-        desc: "Cultural events.",
-        img: "./photo/lashio/culture5.jpg",
-      },
-    ],
-  },
-
-  Clothes: {
-    title: "Traditional Wear",
-    items: [
-      {
-        title: "Shan Textiles",
-        desc: "Striped longyi designs.",
-        img: "./photo/lashio/clothes1.jpg",
-      },
-      {
-        title: "Warm Layers",
-        desc: "Cool climate wear.",
-        img: "./photo/lashio/clothes2.jpg",
-      },
-      {
-        title: "Handwoven Bags",
-        desc: "Local accessories.",
-        img: "./photo/lashio/clothes3.jpg",
-      },
-      {
-        title: "Scarves",
-        desc: "Traditional style.",
-        img: "./photo/lashio/clothes4.jpg",
-      },
-      {
-        title: "Accessories",
-        desc: "Local handmade.",
-        img: "./photo/lashio/clothes5.jpg",
-      },
-    ],
-  },
-
-  Event: {
-    title: "Events",
-    items: [
-      {
-        title: "Shan New Year",
-        desc: "Cultural festivities.",
-        img: "./photo/lashio/event1.jpg",
-      },
-      {
-        title: "Market Fairs",
-        desc: "Seasonal trade events.",
-        img: "./photo/lashio/event2.jpg",
-      },
-      {
-        title: "Pagoda Days",
-        desc: "Temple celebrations.",
-        img: "./photo/lashio/event3.jpg",
-      },
-      {
-        title: "Local Festival",
-        desc: "Community events.",
-        img: "./photo/lashio/event4.jpg",
-      },
-      {
-        title: "Music Show",
-        desc: "Cultural performance.",
-        img: "./photo/lashio/event5.jpg",
+        title: "Thadingyut Festival Shan",
+        desc: "Festival of lights in Shan State. Temples and homes decorated, with cultural performances.",
+        img: "./photo/shan state/Thadingyut Festival Shan.jpg",
       },
     ],
   },
@@ -1707,38 +1778,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const exploreBtn = document.getElementById("go-to-page2-btn");
   const backBtn = document.getElementById("back-to-state-btn");
   const section3 = document.getElementById("city-explorer-section");
-  const scrollSpacer = document.getElementById("scroll-spacer");
-  const popup = document.getElementById("city-popup");
-  const popupClose = document.getElementById("city-popup-close");
-  const popupBack = document.getElementById("city-popup-back");
 
   if (exploreBtn) exploreBtn.style.display = "none";
   if (backBtn) backBtn.style.display = "none";
   if (section3) section3.style.display = "none";
-  if (scrollSpacer) scrollSpacer.style.display = "none";
-  document.body.style.overflow = "hidden";
-
-  lastScrollY = window.scrollY || 0;
-
-  const closeCityPopup = () => {
-    if (popup) popup.classList.remove("show");
-    if (section3) section3.classList.remove("popup-mode");
-    if (backBtn && cityExplorerOpen) backBtn.style.display = "block";
-  };
-
-  if (popupClose && popup) {
-    popupClose.addEventListener("click", closeCityPopup);
-  }
-  if (popupBack && popup) {
-    popupBack.addEventListener("click", closeCityPopup);
-  }
-  if (popup) {
-    popup.addEventListener("click", (e) => {
-      if (e.target === popup) {
-        closeCityPopup();
-      }
-    });
-  }
 });
 
 function handleStateSelect(id) {
@@ -1754,11 +1797,8 @@ function handleStateSelect(id) {
   const dashboard = document.getElementById("dashboard");
   dashboard.style.display = "flex";
   dashboard.classList.add("active-layout");
-
-  // Header ကို ခေတ္တဖျောက်မယ်
   document.getElementById("main-header").classList.add("hidden");
 
-  // Map Zoom Logic
   document
     .querySelectorAll("#map svg path")
     .forEach((p) => p.classList.remove("selected-state"));
@@ -1768,7 +1808,6 @@ function handleStateSelect(id) {
   }
   document.getElementById("map").classList.add("map-zoomed");
 
-  // Overview စာသားများ Update လုပ်မယ်
   document.getElementById("r-name").innerText = data.name || "Region";
   const overviewCard = document.getElementById("overview-card");
   overviewCard.innerHTML = `
@@ -1779,7 +1818,7 @@ function handleStateSelect(id) {
             </div>
         </div>`;
 
-  // Explore Button ကို အစမှာ ဖျောက်ထားမယ်
+  // Explore Button á€€á€­á€¯ á€¡á€…á€™á€¾á€¬ á€–á€»á€±á€¬á€€á€ºá€‘á€¬á€¸á€™á€šá€º
   const exploreBtn = document.getElementById("go-to-page2-btn");
   exploreBtn.style.display = "block";
 
@@ -1794,7 +1833,7 @@ function handleStateSelect(id) {
   if (backBtn) backBtn.style.display = "none";
   document.body.style.overflow = "hidden";
 
-  // Section 3 (City Explorer) အတွက် Data တွေ ကြိုတင်ပြင်ဆင်မယ်
+  // Section 3 (City Explorer) á€¡á€á€½á€€á€º Data á€á€½á€± á€€á€¼á€­á€¯á€á€„á€ºá€•á€¼á€„á€ºá€†á€„á€ºá€™á€šá€º
   setupSection3(data);
   if (data.bgImg) {
     document.body.classList.add("state-bg");
@@ -1811,7 +1850,7 @@ function revealCityExplorer() {
   const section3 = document.getElementById("city-explorer-section");
   if (!section3) return;
 
-  // 🔹 Set STATE background (default city image)
+  // ðŸ”¹ Set STATE background (default city image)
   let defaultCity = currentRegionData?.cities?.[0]; // first city
   if (defaultCity) {
     const bg = defaultCity.bgImg || defaultCity.img || "";
@@ -1834,7 +1873,7 @@ function revealCityExplorer() {
 
   window.scrollTo({ top: 0, behavior: "smooth" });
 
-  // 🔹 setup first city content immediately
+  // ðŸ”¹ setup first city content immediately
   if (defaultCity) updateSection3Content(defaultCity);
 }
 
@@ -1860,7 +1899,6 @@ function returnToStateView() {
     header.classList.remove("hidden");
   }
   document.getElementById("main-header").classList.add("hidden");
-
   window.scrollTo({ behavior: "smooth" });
 }
 
@@ -1883,26 +1921,23 @@ function getCategoryImage(category, cityName) {
   return categoryImages[category] || "";
 }
 
-function openCityPopup(city) {
-  const popup = document.getElementById("city-popup");
+function isRegionLevel() {
+  const name = currentRegionData?.name || "";
+  if (name.includes("Region")) return true;
+  if (name.includes("State")) return false;
 
-  // 🔥 default category
-  const defaultCategory = "Tourism";
+  if (currentState) {
+    const num = parseInt(String(currentState).replace("MM", ""), 10);
+    if (!Number.isNaN(num)) return num >= 1 && num <= 7;
+  }
 
-  // 🔥 default image
-  document.getElementById("city-popup-img").src =
-    categoryImages[defaultCategory];
+  return false;
+}
 
-  document.getElementById("hero-title").innerText =
-    defaultCategory.toUpperCase();
-
-  // 🔥 IMPORTANT (button create)
-  renderCategoryButtons();
-
-  // 🔥 content
-  renderCategoryContent(defaultCategory);
-
-  popup.classList.add("show");
+function getAvailableCategories() {
+  const categories = ["Tourism", "Food", "Event"];
+  if (!isRegionLevel()) categories.splice(2, 0, "Clothes");
+  return categories;
 }
 
 function renderCategoryButtons() {
@@ -1911,7 +1946,7 @@ function renderCategoryButtons() {
 
   row.innerHTML = "";
 
-  const categories = ["Tourism", "Food", "Culture", "Clothes", "Event"];
+  const categories = getAvailableCategories();
 
   categories.forEach((label) => {
     const btn = document.createElement("button");
@@ -1923,7 +1958,7 @@ function renderCategoryButtons() {
     const circleImg = document.createElement("div");
     circleImg.className = "circle-img";
 
-    // 🔥 IMAGE SET
+    // ðŸ”¥ IMAGE SET
     const imgSrc = categoryImages[label];
     if (imgSrc) {
       circleImg.style.backgroundImage = `url('${imgSrc}')`;
@@ -1938,7 +1973,7 @@ function renderCategoryButtons() {
     btn.appendChild(circle);
     btn.appendChild(text);
 
-    // 🔥 CLICK
+    // ðŸ”¥ CLICK
     btn.onclick = () => {
       updateHero(label);
       updateCategoryContent(label);
@@ -1946,33 +1981,6 @@ function renderCategoryButtons() {
 
     row.appendChild(btn);
   });
-}
-
-function swapCategory(clickedLabel) {
-  if (!hiddenCategory) return;
-  visibleCategories = visibleCategories.map((label) =>
-    label === clickedLabel ? hiddenCategory : label,
-  );
-  hiddenCategory = clickedLabel;
-  renderCategoryButtons();
-  updateCategoryContent(clickedLabel);
-}
-
-function updateCategoryContent(label) {
-  const popupImg = document.getElementById("city-popup-img");
-  const heroTitle = document.getElementById("hero-title");
-
-  const imgSrc = categoryImages[label];
-
-  if (popupImg && imgSrc) {
-    popupImg.src = imgSrc;
-  }
-
-  if (heroTitle) {
-    heroTitle.innerText = label.toUpperCase();
-  }
-
-  renderCategoryContent(label);
 }
 
 function renderCategoryContent(label) {
@@ -1983,7 +1991,7 @@ function renderCategoryContent(label) {
     .map(
       (item) => `
     <div class="category-card">
-      <img src="${item.img}" />  <!-- 🔥 image -->
+      <img src="${item.img}" />  <!-- ðŸ”¥ image -->
       <div class="category-card-title">${item.title}</div>
       <div class="category-card-text">${item.desc}</div>
     </div>
@@ -2001,6 +2009,11 @@ function getCategoryData(label) {
   const city = currentCityData || {};
   const region = currentRegionData || {};
   const cityCategories = city.categories || {};
+  const allowedCategories = getAvailableCategories();
+
+  if (!allowedCategories.includes(label)) {
+    return { title: label, items: [] };
+  }
   if (cityCategories[label]) return cityCategories[label];
 
   const cityName = city.name || "This city";
@@ -2031,23 +2044,6 @@ function getCategoryData(label) {
         { title: "Signature", desc: food },
         { title: "Street Food", desc: "Popular stalls and tea shops." },
         { title: "Dining", desc: "Family-run restaurants and markets." },
-      ],
-    };
-  }
-  if (label === "Culture") {
-    const culture =
-      region.cultureTags && region.cultureTags.length > 0
-        ? region.cultureTags.join(", ")
-        : "traditional life, festivals, and local arts";
-    return {
-      title: "Culture",
-      items: [
-        { title: "Identity", desc: culture },
-        { title: "Community", desc: "Active local traditions and rituals." },
-        {
-          title: "Daily Life",
-          desc: "Markets, monasteries, and neighborhoods.",
-        },
       ],
     };
   }
@@ -2106,7 +2102,6 @@ function goBack() {
   const exploreBtn = document.getElementById("go-to-page2-btn");
   if (exploreBtn) exploreBtn.style.display = "none";
 
-  // SimpleMaps Reset
   if (window.simplemaps_countrymap && simplemaps_countrymap.back) {
     simplemaps_countrymap.back();
   }
@@ -2117,15 +2112,23 @@ function goBack() {
   document.body.classList.remove("state-bg");
   document.body.style.backgroundImage = "";
 }
-// ၁။ Circle Button နှိပ်လျှင် Nagano UI ပွင့်စေခြင်း
+
 let activeCityObject = null;
 
-// ၁။ Circle Button များကို Render လုပ်ပြီး Click ချိတ်ဆက်ခြင်း
 function setupSection3(data) {
   const navContainer = document.getElementById("city-nav-right");
   navContainer.innerHTML = "";
 
   if (data.cities && data.cities.length > 0) {
+    const setActiveIndex = (activeIndex) => {
+      navContainer.querySelectorAll(".city-circle-btn").forEach((btn, i) => {
+        btn.classList.toggle("active", i === activeIndex);
+      });
+      navContainer.querySelectorAll(".dot-indicator").forEach((dot, i) => {
+        dot.classList.toggle("active", i === activeIndex);
+      });
+    };
+
     data.cities.forEach((city, index) => {
       const wrapper = document.createElement("div");
       wrapper.className = "city-item";
@@ -2134,34 +2137,45 @@ function setupSection3(data) {
       btn.className = `city-circle-btn ${index === 0 ? "active" : ""}`;
       btn.style.backgroundImage = `url('${city.img}')`;
 
-      // 🔹 Circle Button နှိပ်လိုက်လျှင် Dashboard ကိုဖျောက်ပြီး Nagano UI ကိုဖွင့်မည်
+      const dot = document.createElement("div");
+      dot.className = `dot-indicator ${index === 0 ? "active" : ""}`;
+
+      wrapper.addEventListener("mouseenter", () => {
+        setActiveIndex(index);
+        updateSection3Content(city);
+      });
+
+      dot.onclick = () => {
+        setActiveIndex(index);
+        updateSection3Content(city);
+      };
+
       btn.onclick = () => {
+        setActiveIndex(index);
         document.getElementById("city-explorer-section").style.display = "none";
         document.getElementById("nagano-ui-overlay").style.display = "flex";
 
-        // မြို့အမည်ကို uppercase ပြောင်းပြီး data ဆွဲထုတ်မည်
         const cityName = city.name.toUpperCase();
         activeCityObject = cityCategoryData[cityName];
 
         if (activeCityObject) {
           renderNaganoCategoryMenu();
-          renderNaganoCards("Tourism"); // အစမှာ Tourism ကိုပြမည်
+          renderNaganoCards("Tourism");
         } else {
           console.error("No data found for: " + cityName);
         }
       };
 
       wrapper.appendChild(btn);
+      wrapper.appendChild(dot);
       navContainer.appendChild(wrapper);
     });
   }
 }
-
-// ၂။ အပေါ်က Tourism, Food စသည့် Menu များထုတ်ပေးခြင်း
 function renderNaganoCategoryMenu() {
   const menu = document.getElementById("nagano-category-menu");
   menu.innerHTML = "";
-  const cats = ["Tourism", "Food", "Culture", "Clothes", "Event"];
+  const cats = getAvailableCategories();
 
   cats.forEach((cat, index) => {
     const btn = document.createElement("button");
@@ -2178,7 +2192,6 @@ function renderNaganoCategoryMenu() {
   });
 }
 
-// ၃။ Card များထုတ်ပေးခြင်းနှင့် Smooth Animation Logic
 function renderNaganoCards(category) {
   const holder = document.getElementById("nagano-cards-holder");
   holder.innerHTML = "";
@@ -2186,11 +2199,9 @@ function renderNaganoCards(category) {
   const items = activeCityObject[category]?.items || [];
   if (items.length === 0) return;
 
-  // ၁။ ပထမဆုံး Item ကို Background အဖြစ်ပြပြီး ကျန် ၄ ခုကို Card တန်းထဲထည့်မည်
   let currentBgItem = items[0];
   updateNaganoView(currentBgItem.title, currentBgItem.desc, currentBgItem.img);
 
-  // လက်ရှိမြင်ရမည့် ၄ ကတ် (၅ ကတ်ထဲမှ ၁ ကတ်က Background ဖြစ်နေသောကြောင့်)
   let visibleItems = items.slice(1, 5);
 
   function refreshLayout() {
@@ -2207,11 +2218,9 @@ function renderNaganoCards(category) {
       `;
 
       card.onclick = function () {
-        // (က) နှိပ်လိုက်သောကတ် ပျောက်သွားသည့် Animation ပြုလုပ်
         this.classList.add("card-moving-out");
 
         setTimeout(() => {
-          // (ခ) Logic အရွှေ့အပြောင်း: Background ဟောင်းကို အနောက်ဆုံးပို့၊ နှိပ်လိုက်သောကတ်ကို Background အသစ်လုပ်
           const oldBg = currentBgItem;
           currentBgItem = item;
 
@@ -2225,7 +2234,6 @@ function renderNaganoCards(category) {
           );
           refreshLayout();
 
-          // (ဂ) အသစ်ဝင်လာသောကတ်ကို Animation ပြရန်
           holder.lastElementChild.classList.add("card-arriving");
         }, 500);
       };
@@ -2241,57 +2249,12 @@ function updateNaganoView(title, desc, img) {
   const overlay = document.getElementById("nagano-ui-overlay");
   document.getElementById("nagano-title").innerText = title.toUpperCase();
 
-  // Description update (ရှိလျှင်)
   const descEl = document.getElementById("nagano-desc");
   if (descEl) descEl.innerText = desc || "Experience the beauty of Myanmar.";
 
-  // Background transition
   overlay.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('${img}')`;
 }
 
-function refreshLayout() {
-  holder.innerHTML = "";
-  visibleItems.forEach((item, index) => {
-    const card = document.createElement("div");
-    card.className = "nagano-card";
-    // ပိုမိုကြည်လင်သော Gradient သုံးထားပါသည်
-    card.style.backgroundImage = `linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.8) 100%), url('${item.img}')`;
-
-    card.innerHTML = `
-            <div class="card-label">
-                <small>EXPLORE</small>
-                <h3>${item.title.toUpperCase()}</h3>
-            </div>
-        `;
-
-    card.onclick = function () {
-      // Click လုပ်လိုက်သော Card ကို Smooth ဖြစ်အောင် အရင်ဖျောက်မည်
-      this.style.pointerEvents = "none";
-      this.classList.add("card-moving-out");
-
-      setTimeout(() => {
-        const oldBg = currentBgItem;
-        currentBgItem = item;
-
-        visibleItems = visibleItems.filter((i) => i !== item);
-        visibleItems.push(oldBg);
-
-        updateNaganoView(
-          currentBgItem.title,
-          currentBgItem.desc,
-          currentBgItem.img,
-        );
-        refreshLayout();
-
-        // အနောက်ဆုံးမှ ဝင်လာသောကတ်ကို ညင်သာစွာ ပြမည်
-        const lastCard = holder.lastElementChild;
-        if (lastCard) lastCard.classList.add("card-arriving");
-      }, 600);
-    };
-
-    holder.appendChild(card);
-  });
-}
 function closeNaganoExplorer() {
   document.getElementById("nagano-ui-overlay").style.display = "none";
   document.getElementById("city-explorer-section").style.display = "flex";
