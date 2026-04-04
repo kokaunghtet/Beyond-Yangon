@@ -1,186 +1,95 @@
 <!doctype html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
-<title>Beyond Yangon | Myanmar Regional Explorer</title>
+    <title>Beyond Yangon | Myanmar Regional Explorer</title>
+    
+    <!-- map data link -->
+    <script src="./js/mapdata.js"></script>
+    <script src="./js/countrymap.js"></script>
+    <link rel="icon" href="./photo/Logo.jpg">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
-<!-- map data link -->
-<script src="./js/mapdata.js"></script>
-<script src="./js/countrymap.js"></script>
-<link rel="icon" href="./photo/Logo.jpg">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-  integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- custom css link -->
+    <link rel="stylesheet" href="./css/base.css"/>
+  </head>
 
-<!-- fontawesome pro css link -->
-<link rel="stylesheet" href="./assets/icon/fontawesomepro/css/all.min.css">
+  <body>
+   
+    <header class="header" id="main-header">
+      <div class="logo">BEYOND YANGON</div>
+      
+    </header>
+    <div class="dashboard-container" id="dashboard">
+      <!-- Map Side -->
+      <div id="left-side">
+        <!-- Map -->
+        <div id="map"></div>
+      </div>
 
-<!-- custom css link -->
-<link rel="stylesheet" href="./css/base.css" />
-</head>
+      <!-- Text Side -->
+      <div id="right-side">
+       <div class="content-area">
+  <h1 id="r-name">Region</h1>
 
-<body>
+  <!-- OVERVIEW -->
+  <div id="p-overview" class="pane active">
+    <div class="card-flex" id="overview-card"></div>
+  </div>
 
-  <header class="header" id="main-header">
-    <div class="logo">BEYOND YANGON</div>
-  </header>
-
-  <!-- 
-  --- [ About Section ] -------------------------
-  -->
-  <div id="about-section" class="about-section d-none">
-    <div class="container pt-5 mt-5">
-      <div class="row g-4">
-        <div class="col-md-6">
-          <div class="card p-4 shadow-sm">
-            <h4>🌏 Our Mission</h4>
-            <p>
-              Beyond Yangon is a modern Myanmar regional explorer designed to help users
-              discover regions, culture, food, tourism, and local experiences across Myanmar.
-            </p>
-          </div>
-        </div>
-
-        <div class="col-md-6">
-          <div class="card p-4 shadow-sm">
-            <h4>🚀 What We Provide</h4>
-            <ul>
-              <li>Interactive Myanmar Map</li>
-              <li>Region-based Information</li>
-              <li>Culture & Food Insights</li>
-              <li>Tourism Highlights</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="col-md-12">
-          <div class="card p-4 shadow-sm">
-            <h4>👨‍💻 About Developer</h4>
-            <p>
-              This project is built to showcase modern UI design and interactive
-              learning for Myanmar geography and culture.
-            </p>
-          </div>
-        </div>
+ 
+</div>
       </div>
     </div>
-  </div>
-
-  <!-- 
-  --- [ Home Section ] --------------------------
-  -->
-  <div class="dashboard-container" id="dashboard">
-    <!-- Map Side -->
-    <div id="left-side">
-      <!-- Map -->
-      <div id="map"></div>
     </div>
 
-    <!-- Text Side -->
-    <div id="right-side">
-      <div class="content-area">
-        <h1 id="r-name">Region</h1>
+   
+    <button id="go-to-page2-btn" onclick="revealCityExplorer()">
+        Explore Cities &rightarrow;
+    </button>
 
-        <!-- OVERVIEW -->
-        <div id="p-overview" class="pane active">
-          <div class="card-flex" id="overview-card"></div>
-        </div>
+    <button id="back-to-state-btn" class="back-to-state-btn" onclick="returnToStateView()">
+        &leftarrow; Back to State
+    </button>
 
-        <!-- CITIES -->
-        <div id="p-cities" class="pane">
-          <div class="card-grid" id="cities-card"></div>
-        </div>
-
-        <!-- CULTURE -->
-        <div id="p-culture" class="pane">
-          <div class="card-grid" id="culture-card"></div>
-        </div>
-
-        <!-- FOOD -->
-        <div id="p-food" class="pane">
-          <div class="card-grid" id="food-card"></div>
-        </div>
-
-        <!-- WEATHER -->
-        <div id="p-weather" class="pane">
-          <div class="card-grid" id="weather-card"></div>
-        </div>
-
-        <!-- TOURISM -->
-        <div id="p-tourism" class="pane">
-          <div class="card-grid" id="tourism-card"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-
-  <div id="scroll-spacer" class="scroll-spacer"></div>
-
-  <!-- 
-  --- [ Explore City Button ] ------------------- 
-  -->
-  <button id="go-to-page2-btn" onclick="revealCityExplorer()">
-    Explore Cities &rightarrow;
-  </button>
-
-  <!-- 
-  --- [ Back to State Button ] ------------------
-  -->
-  <button id="back-to-state-btn" class="back-to-state-btn" onclick="returnToStateView()">
-    &leftarrow; Back to State
-  </button>
-
-  <!-- 
-  --- [ City Explorer Section ] -----------------
-  -->
-  <section id="city-explorer-section" class="city-explorer-page">
+    <section id="city-explorer-section" class="city-explorer-page">
     <div class="city-info-left">
-      <h1 id="exp-city-name">CITY NAME</h1>
-      <p id="exp-city-desc">Description text...</p>
+        <h1 id="exp-city-name">CITY NAME</h1>
+        <p id="exp-city-desc">Description text...</p>
     </div>
     <div class="city-nav-right" id="city-nav-right"></div>
-  </section>
+</section>
 
-  <!-- 
-  --- [ Nagano UI Overlay] ----------------------
-  -->
-  <div id="nagano-ui-overlay" class="nagano-full-page">
+<div id="nagano-ui-overlay" class="nagano-full-page">
     <div class="nagano-header">
-      <button class="nagano-back-btn" onclick="closeNaganoExplorer()">← Back to Dashboard</button>
-      <nav class="nagano-top-nav" id="nagano-category-menu"></nav>
+        <button class="nagano-back-btn" onclick="closeNaganoExplorer()">← Back to Dashboard</button>
+        <nav class="nagano-top-nav" id="nagano-category-menu"></nav>
     </div>
 
     <div class="nagano-main-content">
-      <div class="nagano-info-text">
+    <div class="nagano-info-text">
         <span class="exploring-tag">EXPLORING STATE</span>
         <h1 id="nagano-title">SHAN NOODLES</h1>
         <p id="nagano-desc">Light, savory bowls with traditional Shan flavors.</p>
-
+        
         <div class="premium-btn-group">
-          <div class="bookmark-icon">
-            <i class="fas fa-bookmark"></i>
-          </div>
-          <button class="discover-btn">DISCOVER LOCATION</button>
+            <div class="bookmark-icon">
+                <i class="fas fa-bookmark"></i> </div>
+            <button class="discover-btn">DISCOVER LOCATION</button>
         </div>
-      </div>
-
-      <div class="nagano-cards-wrapper">
-        <div id="nagano-cards-holder"></div>
-      </div>
     </div>
-  </div>
+
+    <div class="nagano-cards-wrapper">
+        <div id="nagano-cards-holder"></div>
+    </div>
+</div>
+</div>
 
 
-  <!-- fontawesome pro js link -->
-  <script src="./assets/icon/fontawesomepro/js/all.min.js"></script>
-
-  <!-- custom js link -->
-  <script src="./js/app.js"></script>
-</body>
-
+    <!-- custom js link -->
+    <script src="./js/app.js"></script>
+  </body>
 </html>
