@@ -107,7 +107,7 @@ body {
 }
 
 #map.map-zoomed {
-  transform: scale(0.7);
+  transform: scale(0.8);
 }
 
 #map svg path {
@@ -193,147 +193,6 @@ body {
   gap: 40px;
 }
 
-/* --- City Popup Overlay --- */
-.city-popup {
-  position: absolute;
-  inset: 0;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 5;
-  background: #0b0b0b;
-  backdrop-filter: blur(6px);
-}
-
-.city-popup.show {
-  display: flex;
-}
-
-.city-popup-card {
-  width: 100%;
-  max-width: none;
-  background: transparent;
-  border: none;
-  border-radius: 0;
-  padding: 0 0 40px;
-  color: #fff;
-  position: relative;
-  box-shadow: none;
-}
-
-.city-popup-close {
-  position: fixed;
-  top: 18px;
-  right: 18px;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  background: rgba(0, 0, 0, 0.65);
-  color: #fff;
-  font-size: 24px;
-  line-height: 1;
-  cursor: pointer;
-  z-index: 100001;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
-}
-
-.city-popup-back {
-  position: fixed;
-  top: 18px;
-  left: 18px;
-  padding: 8px 16px;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  background: rgba(0, 0, 0, 0.65);
-  color: #fff;
-  font-weight: 600;
-  cursor: pointer;
-  z-index: 100001;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
-}
-
-@media (max-width: 900px) {
-  .city-popup-card {
-    padding: 24px 16px 32px;
-  }
-
-  .category-row {
-    gap: 12px;
-  }
-
-  .category-btn .circle {
-    width: 90px;
-    height: 90px;
-  }
-}
-
-.city-popup-hero {
-  position: relative;
-  width: 100%;
-  height: 60vh;
-  border-radius: 0;
-  overflow: hidden;
-  border: none;
-}
-
-.city-popup-hero img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.city-popup-title {
-  position: absolute;
-  left: 50%;
-  top: 32px;
-  transform: translateX(-50%);
-  font-size: clamp(2rem, 5vw, 4rem);
-  font-weight: 900;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  text-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
-}
-
-.city-popup-actions {
-  margin-top: 22px;
-}
-
-.city-explorer-page.popup-mode .city-info-left,
-.city-explorer-page.popup-mode .city-nav-right {
-  display: none;
-}
-
-.city-explorer-page.popup-mode {
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  background-image: none !important;
-  background-color: #0b0b0b;
-}
-
-.city-explorer-page.popup-mode::before {
-  opacity: 0;
-}
-
-/* Dark Overlay for Readability */
-.city-explorer-page::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 0.85) 0%,
-    rgba(0, 0, 0, 0.2) 60%,
-    rgba(0, 0, 0, 0.8) 100%
-  );
-  z-index: 1;
-}
-
 .city-info-left {
   position: relative;
   z-index: 2;
@@ -355,6 +214,28 @@ body {
   opacity: 0.9;
 }
 
+#r-name {
+  color: #f8fafc;
+  text-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  letter-spacing: 1px;
+}
+#overview-card.card {
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 0.9);
+  box-shadow:
+    inset0 18px 45px rgba(0, 0, 0, 0.25),
+    0 2px 10px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  backdrop-filter: blur(8px);
+}
+#overview-card.card-body p {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #1f2937;
+  line-height: 1.7;
+}
+
 @media (max-width: 900px) {
   .city-explorer-page {
     flex-direction: column;
@@ -373,6 +254,7 @@ body {
   position: relative;
   --tx: 0px;
   --ty: 0px;
+  --dot-gap: 16px;
   width: 75px;
   height: 75px;
   border-radius: 50%;
@@ -388,20 +270,7 @@ body {
 }
 
 .city-circle-btn::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: calc(-1 * var(--dot-gap));
-  transform: translateY(-50%);
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.35);
-  box-shadow: 0 0 6px rgba(255, 255, 255, 0.25);
-  transition:
-    transform 0.3s var(--easing),
-    background 0.3s var(--easing),
-    box-shadow 0.3s var(--easing);
+  content: none;
 }
 
 .city-circle-btn.active {
@@ -416,18 +285,16 @@ body {
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
 }
 
+.city-circle-btn:hover {
+  border-color: #fff;
+  transform: translate(var(--tx), var(--ty)) scale(1.12);
+  box-shadow: 0 0 18px rgba(255, 255, 255, 0.45);
+}
+
 /* Curved stack like reference (3 buttons) */
 .city-nav-right .city-circle-btn:nth-child(1) {
   --tx: 18px;
   --ty: -24px;
-}
-.city-nav-right .city-circle-btn:nth-child(2) {
-  --tx: 36px;
-  --ty: 0px;
-}
-.city-nav-right .city-circle-btn:nth-child(3) {
-  --tx: 18px;
-  --ty: 24px;
 }
 
 /* Back Button inside Full Page */
@@ -478,39 +345,31 @@ body {
   top: 50%;
   transform: translateY(-50%);
   display: flex;
-  flex-direction: column; /* vertical stacking */
+  flex-direction: column;
   align-items: center;
-  gap: 40px; /* ဒီနေရာမှာ button နဲ့ dot အကြား gap ကိုချိန်နိုင်ပါတယ် */
+  gap: 40px;
   z-index: 2;
 }
-.city-nav-right .city-item:nth-child(1) {
-  transform: translateX(10px);
-}
-.city-nav-right .city-item:nth-child(2) {
-  transform: translateX(30px);
-}
-.city-nav-right .city-item:nth-child(3) {
-  transform: translateX(10px);
-}
+
 .dot-indicator {
   width: 12px;
   height: 12px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.35);
   cursor: pointer;
-  transition: 0.3s;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+  transition:
+    transform 0.3s var(--easing),
+    background 0.3s var(--easing),
+    box-shadow 0.3s var(--easing);
 }
 
 .dot-indicator.active {
   background: white;
   transform: scale(1.5);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.7);
 }
-.city-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px; /* 🔥 button & dot gap */
-}
+
 body.state-bg {
   background-size: cover;
   background-position: center;
@@ -527,7 +386,6 @@ body.state-bg::before {
   z-index: -1;
 }
 
-/* --- ၁။ Root နှင့် Overall Layout --- */
 /* --- Root & Page Overlay --- */
 .nagano-full-page {
   position: fixed;
@@ -645,9 +503,11 @@ body.state-bg::before {
 }
 
 .nagano-card {
-  flex: 1;
-  max-width: 260px;
-  height: 380px;
+  --card-w: 200px;
+  --card-h: 360px;
+  flex: 0 0 var(--card-w);
+  width: var(--card-w);
+  height: var(--card-h);
   border-radius: 20px;
   background-size: cover;
   background-position: center;
@@ -663,7 +523,6 @@ body.state-bg::before {
 }
 
 .nagano-card:hover {
-  flex: 1.4;
   transform: translateY(-10px);
   border-color: #ffcc00;
   z-index: 10;
