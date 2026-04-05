@@ -1,14 +1,14 @@
 var simplemaps_countrymap_mapdata = {
   main_settings: {
     //General settings
-    width: "responsive", //or 'responsive'
+    width: "responsive",
     background_color: "#FFFFFF",
     background_transparent: "yes",
-    border_color: "#ffffff",
+    border_color: "rgba(14, 165, 233, 0.4)",
     pop_ups: "detect",
 
     //State defaults
-    state_color: "#CBD5E1",
+    state_color: "#F6F4F1",
     state_hover_color: "#3B729F",
     state_url: "",
     border_size: 1.5,

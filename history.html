@@ -25,16 +25,16 @@
 
   <header class="header" id="main-header">
     <div class="header-left">
-      <a class="logo" href="./history.html">BEYOND YANGON</a>
+      <a href="#" class="logo">BEYOND YANGON</a>
     </div>
 
     <nav class="navbar">
-      <a class="nav-link" id="history-link" href="./history.html">History</a>
-      <a class="nav-link active" id="map-link" href="./index.html">Map</a>
+      <a class="nav-link active" id="history-link" href="./history.html">History</a>
+      <a class="nav-link" id="map-link" href="./index.html">Map</a>
     </nav>
   </header>
 
-  <section id="history-section" class="d-none">
+  <section id="history-section">
     <div class="history-container">
       <div class="history-header">
         <p class="history-kicker">History of Myanmar</p>
@@ -103,71 +103,6 @@
       </div>
     </div>
   </section>
-
-  <section id="dashboard" class="dashboard-container">
-    <!-- Map Side -->
-    <div id="left-side">
-      <!-- Map -->
-      <div id="map"></div>
-    </div>
-
-    <!-- Text Side -->
-    <div id="right-side">
-      <div class="content-area">
-        <h1 id="r-name">Region</h1>
-
-        <!-- OVERVIEW -->
-        <div id="p-overview" class="pane active">
-          <div class="card-flex" id="overview-card"></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <button id="go-to-page2-btn" onclick="revealCityExplorer()">
-    Explore Cities
-  </button>
-
-  <button id="back-to-state-btn" class="back-to-state-btn" onclick="returnToStateView()">
-    Back to State
-  </button>
-
-  <section id="city-explorer-section" class="city-explorer-page">
-    <div class="city-info-left">
-      <h1 id="exp-city-name">CITY NAME</h1>
-      <p id="exp-city-desc">Description text...</p>
-    </div>
-    <div class="city-nav-right" id="city-nav-right"></div>
-  </section>
-
-  <div id="nagano-ui-overlay" class="nagano-full-page">
-    <div class="nagano-header">
-      <button class="nagano-back-btn" onclick="closeNaganoExplorer()">
-        Back to Dashboard
-      </button>
-      <nav class="nagano-top-nav" id="nagano-category-menu"></nav>
-    </div>
-
-    <div class="nagano-main-content">
-      <div class="nagano-info-text">
-        <span class="exploring-tag">EXPLORING STATE</span>
-        <h1 id="nagano-title">SHAN NOODLES</h1>
-        <p id="nagano-desc">Light, savory bowls with traditional Shan flavors.</p>
-
-        <div class="premium-btn-group">
-          <div class="bookmark-icon">
-            <i class="fas fa-bookmark"></i>
-          </div>
-          <button class="discover-btn">DISCOVER LOCATION</button>
-        </div>
-      </div>
-
-      <div class="nagano-cards-wrapper">
-        <div id="nagano-cards-holder"></div>
-      </div>
-    </div>
-  </div>
-
 
   <!-- custom js link -->
   <script src="./js/app.js"></script>

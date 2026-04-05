@@ -1,0 +1,68 @@
+/* --- Animations --- */
+@keyframes slideInLeft {
+  from {
+    /* Effects */
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  to {
+    /* Effects */
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    /* Effects */
+    opacity: 0;
+  }
+
+  to {
+    /* Effects */
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInText {
+  from {
+    /* Effects */
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    /* Effects */
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    /* Effects */
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    /* Effects */
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes smoothFadeIn {
+  from {
+    /* Effects */
+    opacity: 0;
+    transform: translateX(30px) scale(0.95);
+  }
+
+  to {
+    /* Effects */
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}

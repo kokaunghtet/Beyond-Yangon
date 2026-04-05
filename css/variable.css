@@ -1,0 +1,25 @@
+:root {
+  /* Visual Styles */
+  --color-primary: #3B729F;
+  --color-background: #0F172A;
+  --color-surface: #1E293B;
+  --color-accent: #22D3EE;
+
+  --color-border: 2px solid rgba(255, 255, 255, 0.25);
+
+  /* main text */
+  --color-text: #E5E7EB;
+  /* less important */
+  --color-text-secondary: #9CA3AF;
+  /* labels, hints */
+  --color-text-muted: #6B7280;
+  /* slightly brighter for titles */
+  --color-text-heading: #F9FAFB;
+
+  /* Effects */
+  --shadow-glow: 0 0 20px 10px rgba(14, 165, 233, 0.4);
+
+  /* Transitions / Animations */
+  --transition-speed: 0.8s;
+  --transition-easing: cubic-bezier(0.4, 0, 0.2, 1);
+}

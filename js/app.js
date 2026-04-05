@@ -1811,14 +1811,12 @@ function handleStateSelect(id) {
   document.getElementById("r-name").innerText = data.name || "Region";
   const overviewCard = document.getElementById("overview-card");
   overviewCard.innerHTML = `
-        <div class="card shadow-sm">
             <div class="card-body">
                 <h4>Overview</h4>
                 <p>${data.overview || "No data available for this region."}</p>
-            </div>
-        </div>`;
+            </div>`;
 
-  // Explore Button á€€á€­á€¯ á€¡á€…á€™á€¾á€¬ á€–á€»á€±á€¬á€€á€ºá€‘á€¬á€¸á€™á€šá€º
+  // Explore Button
   const exploreBtn = document.getElementById("go-to-page2-btn");
   exploreBtn.style.display = "block";
 
@@ -1833,7 +1831,7 @@ function handleStateSelect(id) {
   if (backBtn) backBtn.style.display = "none";
   document.body.style.overflow = "hidden";
 
-  // Section 3 (City Explorer) á€¡á€á€½á€€á€º Data á€á€½á€± á€€á€¼á€­á€¯á€á€„á€ºá€•á€¼á€„á€ºá€†á€„á€ºá€™á€šá€º
+  // Section 3 (City Explorer)
   setupSection3(data);
   if (data.bgImg) {
     document.body.classList.add("state-bg");
@@ -1850,7 +1848,7 @@ function revealCityExplorer() {
   const section3 = document.getElementById("city-explorer-section");
   if (!section3) return;
 
-  // ðŸ”¹ Set STATE background (default city image)
+  // Set STATE background (default city image)
   let defaultCity = currentRegionData?.cities?.[0]; // first city
   if (defaultCity) {
     const bg = defaultCity.bgImg || defaultCity.img || "";
@@ -1873,7 +1871,7 @@ function revealCityExplorer() {
 
   window.scrollTo({ top: 0, behavior: "smooth" });
 
-  // ðŸ”¹ setup first city content immediately
+  // setup first city content immediately
   if (defaultCity) updateSection3Content(defaultCity);
 }
 
@@ -1905,6 +1903,9 @@ function returnToStateView() {
 function updateSection3Content(city) {
   currentCityData = city;
   document.getElementById("exp-city-name").innerText = city.name.toUpperCase();
+
+  document.getElementById("exp-city-name").style.color = "#22D3EE";
+
   document.getElementById("exp-city-desc").innerText =
     city.desc || "Explore the wonders of this location.";
 
@@ -1958,7 +1959,7 @@ function renderCategoryButtons() {
     const circleImg = document.createElement("div");
     circleImg.className = "circle-img";
 
-    // ðŸ”¥ IMAGE SET
+    // IMAGE SET
     const imgSrc = categoryImages[label];
     if (imgSrc) {
       circleImg.style.backgroundImage = `url('${imgSrc}')`;
