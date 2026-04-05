@@ -5,6 +5,8 @@
   --color-surface: #1E293B;
   --color-accent: #22D3EE;
 
+  --color-border: 2px solid rgba(255, 255, 255, 0.25);
+
   /* main text */
   --color-text: #E5E7EB;
   /* less important */

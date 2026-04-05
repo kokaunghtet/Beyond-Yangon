@@ -33,7 +33,6 @@
 #go-to-page2-btn:hover {
   /* Visual Styles */
   background: rgba(34, 211, 238, 0.50);
-  color: var(--color-text);
 
   /* Effects */
   transform: translateX(5px);
@@ -43,8 +42,8 @@
 .back-to-state-btn {
   /* Positioning */
   position: fixed;
-  top: 90px;
-  left: 40px;
+  top: 40px;
+  left: 110px;
   z-index: 100000;
 
   /* Box Model */
@@ -74,7 +73,6 @@
 .back-to-state-btn:hover {
   /* Visual Styles */
   background: rgba(34, 211, 238, 0.50);
-  color: var(--color-text);
 
   /* Effects */
   transform: translateX(-5px);
@@ -109,7 +107,6 @@
 .nagano-back-btn:hover {
   /* Visual Styles */
   background: rgba(34, 211, 238, 0.50);
-  color: var(--color-text);
 
   /* Effects */
   transform: translateX(-5px);
